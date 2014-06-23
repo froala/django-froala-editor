@@ -9,7 +9,7 @@ setup(
     url='http://github.com/xtranophilist/django-froala-editor/',
     license='WTFPL',
     description='django-froala-editor package helps integrate Froala WYSIWYG editor  with Django.',
-    long_description=open('README.txt').read(),
+    long_description=open('README.rst').read(),
     include_package_data=True,
     zip_safe=False,
     keywords='froala,django,admin,wysiwyg,editor',
