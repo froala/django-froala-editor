@@ -64,3 +64,9 @@ Options for individual field can also be provided via FroalaField or FroalEditor
             'inlineMode': True,
         }        ))
 
+
+License
+===============
+
+This package is licensed under WTFPL.
+However, Froala editor is free only for non-commercial projects. For other uses, see http://editor.froala.com/download for licensing.
