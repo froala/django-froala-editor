@@ -1,12 +1,15 @@
 from django.db.models import Field, TextField, CharField
 from django.conf import settings
 from froala_editor.widgets import FroalaEditor
+from django.forms import widgets
 
 
 class FroalaField(Field):
-    # def __init__(self, *args, **kwargs):
-    #     self.widget = FroalaEditor()
-    #     super(FroalaField, self).__init__(*args, **kwargs)
+    description = "Froala Editable Field"
+
+    def __init__(self, *args, **kwargs):
+        self.options = kwargs.pop('options', None)
+        super(FroalaField, self).__init__(*args, **kwargs)
 
     # TODO Migration for Django 1.7+
     # def deconstruct(self):
@@ -15,7 +18,7 @@ class FroalaField(Field):
         return "TextField"
 
     def formfield(self, **kwargs):
-        defaults = {'widget': FroalaEditor()}
+        defaults = {'widget': FroalaEditor(options=self.options)}
         defaults.update(kwargs)
         return super(FroalaField, self).formfield(**defaults)
 

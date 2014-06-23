@@ -4,20 +4,23 @@ from django.utils.safestring import mark_safe
 
 class FroalaEditor(widgets.Textarea):
     def __init__(self, *args, **kwargs):
+        self.options = kwargs.pop('options', None)
         super(FroalaEditor, self).__init__(*args, **kwargs)
+
 
     def render(self, name, value, attrs=None):
         html = super(FroalaEditor, self).render(name, value, attrs)
         el_id = self.build_attrs(attrs).get('id')
         html += self.trigger_froala(el_id, {})
         # html += self.init_js % (id_, self.get_options())
+        # html = '<br>' + html
         return mark_safe(html)
 
     def trigger_froala(self, el_id, options):
         str = """
         <script>
             $(function(){
-                $('#id_content').editable({inlineMode: false, alwaysBlank: true})
+                $('#id_content').editable({inlineMode: false})
             });
         </script>"""
         return str
