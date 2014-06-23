@@ -1,7 +1,7 @@
 from distutils.core import setup
 
 setup(
-    name='DjangoFroalaEditor',
+    name='django-froala-editor',
     version='0.6.0',
     author='Dipesh Acharya',
     author_email='xtranophilist@gmail.com',
