@@ -64,6 +64,13 @@ Options for individual field can also be provided via FroalaField or FroalEditor
             'inlineMode': True,
         }        ))
 
+TO-DO
+============
+1. Make the editor work outside admin.
+2. Support image and file upload.
+3. Fix style
+4. Upload to PyPI
+
 
 License
 ===============
