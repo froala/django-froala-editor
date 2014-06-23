@@ -8,7 +8,7 @@ class FroalaField(Field):
     description = "Froala Editable Field"
 
     def __init__(self, *args, **kwargs):
-        self.options = kwargs.pop('options', None)
+        self.options = kwargs.pop('options', {})
         super(FroalaField, self).__init__(*args, **kwargs)
 
     # TODO Migration for Django 1.7+
