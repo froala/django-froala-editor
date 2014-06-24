@@ -101,7 +101,7 @@ TO-DO
 ============
 #. Support image and file upload.
 #. Fix style
-. Upload to PyPI
+#. Upload to PyPI
 
 
 License
