@@ -99,10 +99,9 @@ Options for individual field can also be provided via FroalaField or FroalEditor
 
 TO-DO
 ============
-1. Make the editor work outside admin.
-2. Support image and file upload.
-3. Fix style
-4. Upload to PyPI
+#. Support image and file upload.
+#. Fix style
+. Upload to PyPI
 
 
 License
