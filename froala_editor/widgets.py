@@ -1,4 +1,4 @@
-from django.core.urlresolvers import reverse
+from django.core.urlresolvers import reverse, NoReverseMatch
 from django.forms import widgets
 from django.utils.safestring import mark_safe
 from django.conf import settings
@@ -13,12 +13,18 @@ class FroalaEditor(widgets.Textarea):
         super(FroalaEditor, self).__init__(*args, **kwargs)
 
     def get_options(self):
+
         default_options = {
             'inlineMode': False,
-            'imageUploadURL': reverse('froala_editor_image_upload'),
         }
+        try:
+            image_upload_url = reverse('froala_editor_image_upload')
+            default_options['imageUploadUrl'] = image_upload_url
+        except NoReverseMatch:
+            default_options['imageUpload'] = False
         settings_options = getattr(settings, 'FROALA_EDITOR_OPTIONS', {})
         options = dict(default_options.items() + settings_options.items() + self.options.items())
+        print options
         return json.dumps(options)
 
 
