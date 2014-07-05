@@ -6,7 +6,6 @@ import uuid
 import os
 
 
-
 @csrf_exempt
 def image_upload(request):
     if request.POST:

@@ -106,6 +106,8 @@ Options for individual field can also be provided via FroalaField or FroalEditor
             'inlineMode': True,
         }        ))
 
+You can use ``FROALA_UPLOAD_PATH`` setting in ``settings.py`` to change the path where uploaded files are stored within the ``MEDIA_ROOT``. By default, ``uploads/froala_editor/images`` is used for storing uploaded images.
+
 TO-DO
 ============
 #. Fix style
