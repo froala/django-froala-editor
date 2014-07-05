@@ -12,6 +12,9 @@ def image_upload(request):
     if request.POST:
         if 'file' in request.FILES:
             file = request.FILES['file']
+            allowed_types = ['image/jpeg', 'image/jpg', 'image/pjpeg', 'image/x-png', 'image/png', 'image/gif']
+            if not file.content_type in allowed_types:
+                return HttpResponse(json.dumps({}), mimetype="application/json")
             # Other data on the request.FILES dictionary:
             #   filesize = len(file['content'])
             #   filetype = file['content-type']
