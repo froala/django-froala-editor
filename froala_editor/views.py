@@ -5,6 +5,7 @@ import json
 from django.http import HttpResponse
 from django.conf import settings
 import uuid
+import os
 
 
 
@@ -18,17 +19,16 @@ def image_upload(request):
             #   filetype = file['content-type']
             media_root = getattr(settings, 'MEDIA_ROOT', '.')
             media_url = getattr(settings, 'MEDIA_URL', '.')
-            upload_to = getattr(settings, 'FROALA_UPLOAD_PATH', '/uploads/froala_editor/images')
-            filename = file.name
-            ext = filename.split('.')[-1]
-            final_name = "%s.%s" % (uuid.uuid4(), ext)
-            path = '%s/%s/%s' % (media_root, upload_to, final_name)
-            print path
+            upload_to = getattr(settings, 'FROALA_UPLOAD_PATH', 'uploads/froala_editor/images')
+            full_upload_path = '%s/%s' % (media_root, upload_to)
+            if not os.path.exists(full_upload_path):
+                os.makedirs(full_upload_path)
+            ext = file.name.split('.')[-1]
+            file_name = "%s.%s" % (uuid.uuid4(), ext)
+            path = '%s/%s' % (full_upload_path, file_name)
             fd = open(path, 'wb')
             for chunk in file.chunks():
                 fd.write(chunk)
             fd.close()
-            url = '%s/%s/%s' % (media_url, upload_to, filename)
-            print url
-            data = {'link': url}
-            return HttpResponse(json.dumps(data), mimetype="application/json")
+            link = '%s%s/%s' % (media_url, upload_to, file_name)
+            return HttpResponse(json.dumps({'link': link}), mimetype="application/json")
