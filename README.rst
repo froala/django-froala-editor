@@ -18,6 +18,15 @@ Add the directory `froala_editor` from this repo to your Python path.
 
 2. Add ``froala_editor`` to INSTALLED_APPS in ``settings.py``.
 
+3. Add the following line to ``urlpatterns`` in your application's ``urls.py``.
+
+
+.. code-block:: python
+
+    url(r'^froala_editor/', include('froala_editor.urls')),
+
+Skip this if you don't want image upload inside WYSIWYG editor. Images from URLs can still be embedded.
+
 Usage
 ==============
 
@@ -99,7 +108,6 @@ Options for individual field can also be provided via FroalaField or FroalEditor
 
 TO-DO
 ============
-#. Support image and file upload.
 #. Fix style
 #. Upload to PyPI
 
