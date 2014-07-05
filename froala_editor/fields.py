@@ -1,7 +1,5 @@
-from django.db.models import Field, TextField, CharField
-from django.conf import settings
+from django.db.models import Field
 from froala_editor.widgets import FroalaEditor
-from django.forms import widgets
 
 
 class FroalaField(Field):
@@ -9,6 +7,8 @@ class FroalaField(Field):
 
     def __init__(self, *args, **kwargs):
         self.options = kwargs.pop('options', {})
+        self.image_upload = kwargs.pop('image_upload', True)
+        self.file_upload = kwargs.pop('file_upload', True)
         super(FroalaField, self).__init__(*args, **kwargs)
 
     # TODO Migration for Django 1.7+
@@ -18,7 +18,8 @@ class FroalaField(Field):
         return "TextField"
 
     def formfield(self, **kwargs):
-        defaults = {'widget': FroalaEditor(options=self.options)}
+        defaults = {
+            'widget': FroalaEditor(options=self.options, image_upload=self.image_upload, file_upload=self.file_upload)}
         defaults.update(kwargs)
         return super(FroalaField, self).formfield(**defaults)
 

@@ -1,3 +1,4 @@
+from django.core.urlresolvers import reverse
 from django.forms import widgets
 from django.utils.safestring import mark_safe
 from django.conf import settings
@@ -7,11 +8,14 @@ import json
 class FroalaEditor(widgets.Textarea):
     def __init__(self, *args, **kwargs):
         self.options = kwargs.pop('options', {})
+        self.image_upload = kwargs.pop('image_upload', True)
+        self.file_upload = kwargs.pop('file_upload', True)
         super(FroalaEditor, self).__init__(*args, **kwargs)
 
     def get_options(self):
         default_options = {
             'inlineMode': False,
+            'imageUploadURL': reverse('froala_editor_image_upload'),
         }
         settings_options = getattr(settings, 'FROALA_EDITOR_OPTIONS', {})
         options = dict(default_options.items() + settings_options.items() + self.options.items())
@@ -22,8 +26,6 @@ class FroalaEditor(widgets.Textarea):
         html = super(FroalaEditor, self).render(name, value, attrs)
         el_id = self.build_attrs(attrs).get('id')
         html += self.trigger_froala(el_id, self.get_options())
-        # html += self.init_js % (id_, self.get_options())
-        # html = '<br>' + html
         return mark_safe(html)
 
     def trigger_froala(self, el_id, options):
