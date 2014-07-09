@@ -117,5 +117,5 @@ TO-DO
 License
 ===============
 
-This package is licensed under WTFPL.
+This package is available under BSD License.
 However, Froala editor is free only for non-commercial projects. For other uses, see http://editor.froala.com/download for licensing.
