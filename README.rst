@@ -10,7 +10,7 @@ Getting started
 
 1. Install the package::
 
-    pip install git+git://github.com/xtranophilist/django-froala-editor.git
+    pip install django-froala-editor
 
 OR
 
