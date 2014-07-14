@@ -25,7 +25,7 @@ Add the directory `froala_editor` from this repo to your Python path.
 
     url(r'^froala_editor/', include('froala_editor.urls')),
 
-Skip this if you don't want image upload inside WYSIWYG editor. Images from URLs can still be embedded.
+Skip this url inclusion if you don't want image upload inside WYSIWYG editor. Images from URLs can still be embedded.
 
 Usage
 ==============
@@ -107,11 +107,6 @@ Options for individual field can also be provided via FroalaField or FroalEditor
         }        ))
 
 You can use ``FROALA_UPLOAD_PATH`` setting in ``settings.py`` to change the path where uploaded files are stored within the ``MEDIA_ROOT``. By default, ``uploads/froala_editor/images`` is used for storing uploaded images.
-
-TO-DO
-============
-#. Fix style
-#. Upload to PyPI
 
 
 License
