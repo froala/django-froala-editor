@@ -1,3 +1,8 @@
+/*!
+ * froala_editor v1.1.6 (http://editor.froala.com)
+ * Copyright 2014-2014 Froala
+ */
+
 /**
  * Dutch
  */
@@ -59,7 +64,25 @@ $.Editable.LANGS['nl'] = {
     "Manage images": "Beheren van beelden",
     "Delete": "Verwijder",
     "Font Family": "Lettertype",
-    "Insert Horizontal Line": "Plaats horizontale lijn"
+    "Insert Horizontal Line": "Plaats horizontale lijn",
+    "Table": "Tabel",
+    "Insert table": "Tabel invoegen",
+    "Cell": "Cel",
+    "Row": "Rij",
+    "Column": "Kolom",
+    "Delete table": "Verwijder tabel",
+    "Insert cell before": "Voeg cel in voor",
+    "Insert cell after": "Voeg cel in na",
+    "Delete cell": "Verwijder cel",
+    "Merge cells": "Cellen samenvoegen",
+    "Horizontal split": "Horizontaal splitsen",
+    "Vertical split": "Verticaal splitsen",
+    "Insert row above": "Voeg rij boven toe",
+    "Insert row below": "Voeg rij onder toe",
+    "Delete row": "Verwijder rij",
+    "Insert column before": "Voeg kolom in voor",
+    "Insert column after": "Voeg kolom in na",
+    "Delete column": "Verwijder kolom"
   },
   direction: "ltr"
 };

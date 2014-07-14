@@ -1,3 +1,8 @@
+/*!
+ * froala_editor v1.1.6 (http://editor.froala.com)
+ * Copyright 2014-2014 Froala
+ */
+
 /**
  * Swedish
  */
@@ -59,7 +64,25 @@ $.Editable.LANGS['sv'] = {
     "Manage images": "Hantera bilder",
     "Delete": "Radera",
     "Font Family": "Teckensnitt",
-    "Insert Horizontal Line": "Infoga horisontell linje"
+    "Insert Horizontal Line": "Infoga horisontell linje",
+    "Table": "Tabell",
+    "Insert table": "Infoga tabell",
+    "Cell": "Cell",
+    "Row": "Rad",
+    "Column": "Kolumn",
+    "Delete table": "Radera tabell",
+    "Insert cell before": "Infoga cell innan",
+    "Insert cell after": "Infoga cell efter",
+    "Delete cell": "Radera cell",
+    "Merge cells": "Sammanfoga celler",
+    "Horizontal split": "Horisontell split",
+    "Vertical split": "Vertikal split",
+    "Insert row above": "Infoga rad f\u00f6re",
+    "Insert row below": "Infoga rad efter",
+    "Delete row": "Radera rad",
+    "Insert column before": "Infoga kollumn f\u00f6re",
+    "Insert column after": "Infoga kolumn efter",
+    "Delete column": "Radera kolumn"
   },
   direction: "ltr"
 };

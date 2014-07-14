@@ -1,3 +1,8 @@
+/*!
+ * froala_editor v1.1.6 (http://editor.froala.com)
+ * Copyright 2014-2014 Froala
+ */
+
 /**
  * Norwegian
  */
@@ -59,7 +64,25 @@ $.Editable.LANGS['nb'] = {
     "Manage images": "Bildebehandling",
     "Delete": "Slett",
     "Font Family": "Skriftsnitt",
-    "Insert Horizontal Line": "Sett inn horisontal linje"
+    "Insert Horizontal Line": "Sett inn horisontal linje",
+    "Table": "Tabell",
+    "Insert table": "Sett inn tabell",
+    "Cell": "Celle",
+    "Row": "Rad",
+    "Column": "Kolonne",
+    "Delete table": "Slett tabell",
+    "Insert cell before": "Sett inn celle f\u00f8r",
+    "Insert cell after": "Sett inn celle etter",
+    "Delete cell": "Slett celle",
+    "Merge cells": "Sl\u00e5 sammen celler",
+    "Horizontal split": "Horisontalt delt",
+    "Vertical split": "Vertikal split",
+    "Insert row above": "Sett inn rad f\u00f8r",
+    "Insert row below": "Sett in rad etter",
+    "Delete row": "Slett rad",
+    "Insert column before": "Sett inn kolonne f\u00f8r",
+    "Insert column after": "Sett inn kolonne etter",
+    "Delete column": "Slett kolonne"
   },
   direction: "ltr"
 };

@@ -1,3 +1,8 @@
+/*!
+ * froala_editor v1.1.6 (http://editor.froala.com)
+ * Copyright 2014-2014 Froala
+ */
+
 /**
  * Portuguese spoken in Portugal
  */
@@ -59,7 +64,25 @@ $.Editable.LANGS['pt_pt'] = {
     "Manage images": "Gerenciar as imagens",
     "Delete": "Apagar",
     "Font Family": "Fonte",
-    "Insert Horizontal Line": "Inserir linha horizontal"
+    "Insert Horizontal Line": "Inserir linha horizontal",
+    "Table": "Tabela",
+    "Insert table": "Inserir tabela",
+    "Cell": "C\u00e9lula",
+    "Row": "Linha",
+    "Column": "Coluna",
+    "Delete table": "Eliminar tabela",
+    "Insert cell before": "Inserir c\u00e9lula antes",
+    "Insert cell after": "Inserir c\u00e9lula depois",
+    "Delete cell": "Excluir celular",
+    "Merge cells": "Unir c\u00e9lulas",
+    "Horizontal split": "Divis\u00e3o horizontal",
+    "Vertical split": "Divis\u00e3o vertical",
+    "Insert row above": "Inserir linha antes",
+    "Insert row below": "Inserir linha depois",
+    "Delete row": "Eliminar linha",
+    "Insert column before": "Inserir coluna antes",
+    "Insert column after": "Inserir coluna depois",
+    "Delete column": "Eliminar coluna"
   },
   direction: "ltr"
 };

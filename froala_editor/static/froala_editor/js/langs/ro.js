@@ -1,3 +1,8 @@
+/*!
+ * froala_editor v1.1.6 (http://editor.froala.com)
+ * Copyright 2014-2014 Froala
+ */
+
 /**
  * Romanian
  */
@@ -59,7 +64,25 @@ $.Editable.LANGS['ro'] = {
     "Manage images": "Gestionare imagini",
     "Delete": "\u015eterge",
     "Font Family": "Font",
-    "Insert Horizontal Line": "Inserare linie orizontal\u0103"
+    "Insert Horizontal Line": "Inserare linie orizontal\u0103",
+    "Table": "Tabel",
+    "Insert table": "Inserare tabel",
+    "Cell": "Celula",
+    "Row": "Linie",
+    "Column": "Coloan\u0103",
+    "Delete table": "\u0218terge tabel",
+    "Insert cell before": "Insereaz\u0103 celula \u00eenainte",
+    "Insert cell after": "Insereaz\u0103 celula dup\u0103",
+    "Delete cell": "\u0218terge celula",
+    "Merge cells": "Une\u015fte celulele",
+    "Horizontal split": "\u00cemparte orizontal",
+    "Vertical split": "\u00cemparte vertical",
+    "Insert row above": "Insereaz\u0103 linie \u00eenainte",
+    "Insert row below": "Insereaz\u0103 linie dup\u0103",
+    "Delete row": "\u015eterge linia",
+    "Insert column before": "Insereaz\u0103 coloan\u0103 \u00eenainte",
+    "Insert column after": "Insereaz\u0103 coloan\u0103 dup\u0103",
+    "Delete column": "\u015eterge coloana"
   },
   direction: "ltr"
 };

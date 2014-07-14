@@ -1,3 +1,8 @@
+/*!
+ * froala_editor v1.1.6 (http://editor.froala.com)
+ * Copyright 2014-2014 Froala
+ */
+
 /**
  * Polish
  */
@@ -59,7 +64,25 @@ $.Editable.LANGS['pl'] = {
     "Manage images": "Zarz\u0105dzanie zdj\u0119ciami",
     "Delete": "Usun\u0105\u0107",
     "Font Family": "Kr\u00f3j czcionki",
-    "Insert Horizontal Line": "Wstaw lini\u0119 poziom\u0105"
+    "Insert Horizontal Line": "Wstaw lini\u0119 poziom\u0105",
+    "Table": "Tabela",
+    "Insert table": "Wstaw tabel\u0119",
+    "Cell": "Kom\u00f3rka",
+    "Row": "Wiersz",
+    "Column": "Kolumna",
+    "Delete table": "Usu\u0144 tabel\u0119",
+    "Insert cell before": "Wstaw kom\u00f3rk\u0119 przed",
+    "Insert cell after": "Wstaw kom\u00f3rk\u0119 po",
+    "Delete cell": "Usu\u0144 kom\u00f3rk\u0119",
+    "Merge cells": "\u0141\u0105cz kom\u00f3rki",
+    "Horizontal split": "Podzia\u0142 poziomy",
+    "Vertical split": "Podzia\u0142 pionowy",
+    "Insert row above": "Wstaw wiersz przed",
+    "Insert row below": "Wstaw wiersz po",
+    "Delete row": "Usu\u0144 wiersz",
+    "Insert column before": "Wstaw kolumn\u0119 przed",
+    "Insert column after": "Wstaw kolumn\u0119 po",
+    "Delete column": "Usu\u0144 kolumn\u0119"
   },
   direction: "ltr"
 };

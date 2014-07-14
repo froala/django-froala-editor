@@ -1,3 +1,8 @@
+/*!
+ * froala_editor v1.1.6 (http://editor.froala.com)
+ * Copyright 2014-2014 Froala
+ */
+
 /**
  * Turkish
  */
@@ -59,7 +64,25 @@ $.Editable.LANGS['tr'] = {
     "Manage images": "G\u00f6r\u00fcnt\u00fcleri y\u00f6netin",
     "Delete": "Silmek",
     "Font Family": "Yaz\u0131tipi Ailesi",
-    "Insert Horizontal Line": "Yatay \u00e7izgi ekleme"
+    "Insert Horizontal Line": "Yatay \u00e7izgi ekleme",
+    "Table": "Tablo",
+    "Insert table": "Tablo ekle",
+    "Cell": "H\u00fccre",
+    "Row": "Sat\u0131r",
+    "Column": "S\u00fctun",
+    "Delete table": "Tabloyu sil",
+    "Insert cell before": "\u00d6nce h\u00fccre ekler",
+    "Insert cell after": "Sonra h\u00fccre ekler",
+    "Delete cell": "H\u00fccreyi silmek",
+    "Merge cells": "H\u00fccreleri birle\u015ftir",
+    "Horizontal split": "Yatay b\u00f6l\u00fcnm\u00fc\u015f",
+    "Vertical split": "Dikey  b\u00f6l\u00fcnm\u00fc\u015f",
+    "Insert row above": "\u00d6ncesine yeni sat\u0131r ekle",
+    "Insert row below": "Sonras\u0131na yeni sat\u0131r ekle",
+    "Delete row": "Sat\u0131r\u0131 sil",
+    "Insert column before": "\u00d6ncesine yeni s\u00fctun ekle",
+    "Insert column after": "Sonras\u0131na yeni s\u00fctun ekle",
+    "Delete column": "S\u00fctunu sil"
   },
   direction: "ltr"
 };
