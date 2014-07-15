@@ -19,7 +19,7 @@ class FroalaEditor(widgets.Textarea):
         }
         try:
             image_upload_url = reverse('froala_editor_image_upload')
-            default_options['imageUploadUrl'] = image_upload_url
+            default_options['imageUploadURL'] = image_upload_url
         except NoReverseMatch:
             default_options['imageUpload'] = False
         settings_options = getattr(settings, 'FROALA_EDITOR_OPTIONS', {})
