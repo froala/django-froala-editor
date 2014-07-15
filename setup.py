@@ -1,8 +1,8 @@
-from distutils.core import setup
+from setuptools import setup
 
 setup(
     name='django-froala-editor',
-    version='0.8.1',
+    version='0.8.5',
     author='Dipesh Acharya',
     author_email='xtranophilist@gmail.com',
     packages=['froala_editor'],
