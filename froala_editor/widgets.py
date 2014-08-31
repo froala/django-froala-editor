@@ -1,5 +1,5 @@
 from django.core.urlresolvers import reverse, NoReverseMatch
-from django.forms import widgets
+from django.forms import widgets, Media
 from django.utils.safestring import mark_safe
 from django.conf import settings
 import json
@@ -42,8 +42,12 @@ class FroalaEditor(widgets.Textarea):
         </script>""" % (el_id, options)
         return str
 
-    class Media:
-        css = {
-            'all': ('froala_editor/css/font-awesome.min.css', 'froala_editor/css/froala_editor.min.css', 'froala_editor/css/froala-django.css')
+    def _media(self):
+        css={
+        'all': ('froala_editor/css/font-awesome.min.css', 'froala_editor/css/froala_editor.min.css', 'froala_editor/css/froala-django.css')
         }
-        js = ('froala_editor/js/libs/jquery-1.10.2.min.js', 'froala_editor/js/froala_editor.min.js',)
+        js=('froala_editor/js/libs/jquery-1.10.2.min.js', 'froala_editor/js/froala_editor.min.js',)
+        return Media(css=css, js=js)
+
+    media = property(_media)
+
