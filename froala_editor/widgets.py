@@ -8,6 +8,7 @@ import json
 class FroalaEditor(widgets.Textarea):
     def __init__(self, *args, **kwargs):
         self.options = kwargs.pop('options', {})
+        self.plugins = kwargs.pop('plugins', {})
         self.theme = kwargs.pop('theme', None)
         self.image_upload = kwargs.pop('image_upload', True)
         self.file_upload = kwargs.pop('file_upload', True)
@@ -56,6 +57,12 @@ class FroalaEditor(widgets.Textarea):
 
         if self.theme:
             css['all'] += ('froala_editor/css/themes/'+self.theme+'.css',)
+
+        print self.plugins
+        for plugin in self.plugins:
+            js += ('froala_editor/js/plugins/'+plugin+'.min.js',)
+
+
 
         return Media(css=css, js=js)
 
