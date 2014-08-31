@@ -8,6 +8,7 @@ import json
 class FroalaEditor(widgets.Textarea):
     def __init__(self, *args, **kwargs):
         self.options = kwargs.pop('options', {})
+        self.theme = kwargs.pop('theme', None)
         self.image_upload = kwargs.pop('image_upload', True)
         self.file_upload = kwargs.pop('file_upload', True)
         super(FroalaEditor, self).__init__(*args, **kwargs)
@@ -17,6 +18,7 @@ class FroalaEditor(widgets.Textarea):
         default_options = {
             'inlineMode': False,
         }
+
         try:
             image_upload_url = reverse('froala_editor_image_upload')
             default_options['imageUploadURL'] = image_upload_url
@@ -24,6 +26,10 @@ class FroalaEditor(widgets.Textarea):
             default_options['imageUpload'] = False
         settings_options = getattr(settings, 'FROALA_EDITOR_OPTIONS', {})
         options = dict(default_options.items() + settings_options.items() + self.options.items())
+
+        if self.theme:
+            options['theme'] = self.theme
+
         return json.dumps(options)
 
 
@@ -43,10 +49,14 @@ class FroalaEditor(widgets.Textarea):
         return str
 
     def _media(self):
-        css={
+        css = {
         'all': ('froala_editor/css/font-awesome.min.css', 'froala_editor/css/froala_editor.min.css', 'froala_editor/css/froala-django.css')
         }
-        js=('froala_editor/js/libs/jquery-1.10.2.min.js', 'froala_editor/js/froala_editor.min.js',)
+        js = ('froala_editor/js/libs/jquery-1.10.2.min.js', 'froala_editor/js/froala_editor.min.js',)
+
+        if self.theme:
+            css['all'] += ('froala_editor/css/themes/'+self.theme+'.css',)
+
         return Media(css=css, js=js)
 
     media = property(_media)
