@@ -58,28 +58,32 @@ When used outside the Django admin, the media files are to be manually included 
 
     {{ form.media }}
 
-OR:
+
+In case of jQuery conflict (when your project template already has jQuery), you need to include the following files instead of `{{ form.media }}` plus the static files for theme (if not default) and required plugins.
 
 .. code-block:: python
 
     <link href="{{STATIC_URL}}froala_editor/css/font-awesome.min.css" type="text/css" media="all" rel="stylesheet" />
     <link href="{{STATIC_URL}}froala_editor/css/froala_editor.min.css" type="text/css" media="all" rel="stylesheet" />
-    <script type="text/javascript" src="{{STATIC_URL}}froala_editor/js/jquery.min.js"></script>
-    <script type="text/javascript" src="{{STATIC_URL}}froala_editor/js/froala_editor.min.js"></script>
+    <script type="text/javascript" src="{{STATIC_URL}}froala_editor/js/froala_editor.min.js"></script
 
 
-If your template already uses jQuery (v1.10.2+ required), include:
+If you don't want to use jQuery from this package, you may use the following in your `settings.py`:
 
 .. code-block:: python
 
-    <link href="{{STATIC_URL}}froala_editor/css/font-awesome.min.css" type="text/css" media="all" rel="stylesheet" />
-    <link href="{{STATIC_URL}}froala_editor/css/froala_editor.min.css" type="text/css" media="all" rel="stylesheet" />
-    <script type="text/javascript" src="{{STATIC_URL}}froala_editor/js/froala_editor.min.js"></script>
+FROALA_INCLUDE_JQUERY = False
 
 
 
-Options
+Customization
 ==============
+
+
+FroalaField and FroalaEditor take in the following arguments:
+
+options
+^^^^^^^^^
 
 Froala Editor provides several options for customizing the editor. See http://editor.froala.com/docs for all available options.
 You can provide a dictionary of these options as `FROALA_EDITOR_OPTIONS` setting in `settings.py`. These options would then be used for all instances of the WYSIWYG editor in the project.
@@ -109,8 +113,39 @@ Options for individual field can also be provided via FroalaField or FroalEditor
 You can use ``FROALA_UPLOAD_PATH`` setting in ``settings.py`` to change the path where uploaded files are stored within the ``MEDIA_ROOT``. By default, ``uploads/froala_editor/images`` is used for storing uploaded images.
 
 
+theme
+^^^^^^^^^
+
+You may provide the name of the theme to be used as `theme` argument to FroalaField or FroalaEditor.
+
+
+.. code-block:: python
+
+    from django.db import models
+    from froala_editor.fields import FroalaField
+
+    class Page(models.Model):
+        content = FroalaField(theme='dark')
+
+
+`FROALA_EDITOR_THEME` can be set in settings.py making all instances of the editor to use a theme. However, `theme` argument in FroalaField and FroalaEditor overrides `FROALA_EDITOR_THEME`. Using a theme named 'dark' would require the existence of the file `froala_editor/static/froala_editor/css/themes/dark.min.css`. Only 'dark' theme is available for now.
+
+
+plugins
+^^^^^^^^^^
+Froala Editor comes with the plugins: block style, text & background colors, font size, font family, insert video, insert table and media manager. By default, all plugins are enabled by default in this package.
+
+`FROALA_EDITOR_PLUGINS` can be set in settings.py to tell which plugins should all instances of Froala Editor be using. By default, it is
+
+.. code-block:: python
+
+    FROALA_EDITOR_PLUGINS = ('font_size', 'font_family', 'colors', 'block_styles', 'video', 'tables', 'media_manager',)
+
+The usage of `plugins` argument with FroalaEditor or FroalaField overrides this for that particular instance.
+
+
 License
 ===============
 
 This package is available under BSD License.
-However, Froala editor is free only for non-commercial projects. For other uses, see http://editor.froala.com/download for licensing.
+However, Froala editor is free only for non-commercial projects. See http://editor.froala.com/download for licensing.

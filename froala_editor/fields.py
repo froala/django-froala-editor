@@ -12,7 +12,6 @@ class FroalaField(Field):
         self.plugins = kwargs.pop('plugins', getattr(settings, 'FROALA_EDITOR_PLUGINS', (
                                   'font_size', 'font_family', 'colors', 'block_styles', 'video', 'tables', 'media_manager',
                                   )))
-        print self.plugins
         self.image_upload = kwargs.pop('image_upload', True)
         self.file_upload = kwargs.pop('file_upload', True)
         super(FroalaField, self).__init__(*args, **kwargs)
