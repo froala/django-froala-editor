@@ -1,3 +1,4 @@
 v0.6, Jun 23, 2014 -- Initial release.
 v0.7, Jul 06, 2014 -- Added support for image upload.
 v0.8, Jul 14, 2014 -- Fixed style conflicts with Django admin.
+v0.9, Sep 02, 2014 -- Added plugin, theme support.
