@@ -10,6 +10,7 @@ class FroalaEditor(widgets.Textarea):
         self.options = kwargs.pop('options', {})
         self.plugins = kwargs.pop('plugins', {})
         self.theme = kwargs.pop('theme', None)
+        self.include_jquery = kwargs.pop('include_jquery', True)
         self.image_upload = kwargs.pop('image_upload', True)
         self.file_upload = kwargs.pop('file_upload', True)
         super(FroalaEditor, self).__init__(*args, **kwargs)
@@ -53,18 +54,18 @@ class FroalaEditor(widgets.Textarea):
         css = {
         'all': ('froala_editor/css/font-awesome.min.css', 'froala_editor/css/froala_editor.min.css', 'froala_editor/css/froala-django.css')
         }
-        js = ('froala_editor/js/libs/jquery-1.10.2.min.js', 'froala_editor/js/froala_editor.min.js',)
+        js = ('froala_editor/js/froala_editor.min.js',)
+
+        if self.include_jquery:
+            print self.include_jquery
+            js = ('froala_editor/js/libs/jquery-1.10.2.min.js',) + js
 
         if self.theme:
             css['all'] += ('froala_editor/css/themes/'+self.theme+'.css',)
 
-        print self.plugins
         for plugin in self.plugins:
             js += ('froala_editor/js/plugins/'+plugin+'.min.js',)
-
-
 
         return Media(css=css, js=js)
 
     media = property(_media)
-

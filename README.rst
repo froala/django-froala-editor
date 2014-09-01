@@ -139,7 +139,7 @@ Froala Editor comes with the plugins: block style, text & background colors, fon
 
     FROALA_EDITOR_PLUGINS = ('font_size', 'font_family', 'colors', 'block_styles', 'video', 'tables', 'media_manager',)
 
-The usage of ``plugins`` argument with ``FroalaEditor`` or ``FroalaField``overrides this for that particular instance.
+The usage of ``plugins`` argument with ``FroalaEditor`` or ``FroalaField`` overrides this for that particular instance.
 
 
 .. code-block:: python
@@ -156,6 +156,11 @@ image_upload
 ``FroalaEditor`` and ``FroalaField`` optionally take in a boolean value for ``image_upload`` argument to enable or disable image uploads. Image uploads are enabled by default if the urls of this package are included in your urls.py.
 
 You can use ``FROALA_UPLOAD_PATH`` setting in ``settings.py`` to change the path where uploaded files are stored within the ``MEDIA_ROOT``. By default, ``uploads/froala_editor/images`` is used for storing uploaded images.
+
+
+include_jquery
+^^^^^^^^^^^^^^^
+jQuery is included by default in form media. If you don't want to include jQuery, you may pass ``include_jquery=False`` to ``FroalaEditor`` or ``FroalaField``. ``FROALA_INCLUDE_JQUERY`` can be also set in ``settings.py`` for project wide effects.
 
 License
 ===============

@@ -12,6 +12,7 @@ class FroalaField(Field):
         self.plugins = kwargs.pop('plugins', getattr(settings, 'FROALA_EDITOR_PLUGINS', (
                                   'font_size', 'font_family', 'colors', 'block_styles', 'video', 'tables', 'media_manager',
                                   )))
+        self.include_jquery = kwargs.pop('include_jquery', getattr(settings, 'FROALA_INCLUDE_JQUERY', True))
         self.image_upload = kwargs.pop('image_upload', True)
         self.file_upload = kwargs.pop('file_upload', True)
         super(FroalaField, self).__init__(*args, **kwargs)
@@ -24,7 +25,7 @@ class FroalaField(Field):
 
     def formfield(self, **kwargs):
         defaults = {
-            'widget': FroalaEditor(options=self.options, theme=self.theme, plugins=self.plugins, image_upload=self.image_upload, file_upload=self.file_upload)}
+            'widget': FroalaEditor(options=self.options, theme=self.theme, plugins=self.plugins, include_jquery=self.include_jquery, image_upload=self.image_upload, file_upload=self.file_upload)}
         defaults.update(kwargs)
         return super(FroalaField, self).formfield(**defaults)
 
