@@ -137,7 +137,7 @@ Froala Editor comes with the plugins: block style, text & background colors, fon
 
 .. code-block:: python
 
-    FROALA_EDITOR_PLUGINS = ('font_size', 'font_family', 'colors', 'block_styles', 'video', 'tables', 'media_manager',)
+    FROALA_EDITOR_PLUGINS = ('font_size', 'font_family', 'colors', 'block_styles', 'video', 'tables', 'media_manager', 'lists', 'file_upload')
 
 The usage of ``plugins`` argument with ``FroalaEditor`` or ``FroalaField`` overrides this for that particular instance.
 

@@ -8,7 +8,9 @@ import json
 class FroalaEditor(widgets.Textarea):
     def __init__(self, *args, **kwargs):
         self.options = kwargs.pop('options', {})
-        self.plugins = kwargs.pop('plugins', {})
+        self.plugins = kwargs.pop('plugins', getattr(settings, 'FROALA_EDITOR_PLUGINS', (
+                                  'font_size', 'font_family', 'colors', 'block_styles', 'video', 'tables', 'media_manager', 'lists', 'file_upload'
+                                  )))
         self.theme = kwargs.pop('theme', None)
         self.include_jquery = kwargs.pop('include_jquery', True)
         self.image_upload = kwargs.pop('image_upload', True)
