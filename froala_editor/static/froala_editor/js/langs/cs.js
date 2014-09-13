@@ -1,5 +1,5 @@
 /*!
- * froala_editor v1.1.9 (http://editor.froala.com)
+ * froala_editor v1.2.1 (http://editor.froala.com)
  * Copyright 2014-2014 Froala
  */
 
@@ -28,6 +28,7 @@ $.Editable.LANGS['cs'] = {
     "Heading 4": "Nadpis 4",
     "Heading 5": "Nadpis 5",
     "Heading 6": "Nadpis 6",
+    "Block Style": "Block styl",
     "Alignment": "Zarovn\u00e1n\u00ed",
     "Align Left": "Zarovnat vlevo",
     "Align Center": "Zarovnat na st\u0159ed",
@@ -53,6 +54,7 @@ $.Editable.LANGS['cs'] = {
     "Insert image": "Vlo\u017eit obr\u00e1zek",
     "Drop image": "Shodit obr\u00e1zek",
     "or click": "nebo klepn\u011bte na tla\u010d\u00edtko",
+    "or": "nebo",
     "Enter URL": "Zadejte adresu URL",
     "Please wait!": "\u010cekejte, pros\u00edm!",
     "Are you sure? Image will be deleted.": "Jsi si jist\u00fd? Obr\u00e1zek bude smaz\u00e1n.",

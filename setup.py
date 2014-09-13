@@ -8,7 +8,7 @@ setup(
     packages=['froala_editor'],
     url='http://github.com/froala/django-froala-editor/',
     license='BSD License',
-    description='django-froala-editor package helps integrate Froala WYSIWYG editor  with Django.',
+    description='django-froala-editor package helps integrate Froala WYSIWYG editor with Django.',
     long_description=open('README.rst').read(),
     include_package_data=True,
     zip_safe=False,

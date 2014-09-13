@@ -1,5 +1,5 @@
 /*!
- * froala_editor v1.1.9 (http://editor.froala.com)
+ * froala_editor v1.2.1 (http://editor.froala.com)
  * Copyright 2014-2014 Froala
  */
 
@@ -28,6 +28,7 @@ $.Editable.LANGS['nb'] = {
     "Heading 4": "Overskrift 4",
     "Heading 5": "Overskrift 5",
     "Heading 6": "Overskrift 6",
+    "Block Style": "Block stil",
     "Alignment": "Justering",
     "Align Left": "Venstrejustert",
     "Align Center": "Midtstilt",
@@ -53,6 +54,7 @@ $.Editable.LANGS['nb'] = {
     "Insert image": "Sett inn bilde",
     "Drop image": "Slippe bilde",
     "or click": "eller klikk",
+    "or": "eller",
     "Enter URL": "Angi URL",
     "Please wait!": "Vennligst vent!",
     "Are you sure? Image will be deleted.": "Er du sikker? Bildet vil bli slettet.",

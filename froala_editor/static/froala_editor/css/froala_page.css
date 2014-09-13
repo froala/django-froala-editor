@@ -1,5 +1,5 @@
 /*!
- * froala_editor v1.1.9 (http://editor.froala.com)
+ * froala_editor v1.2.1 (http://editor.froala.com)
  * Copyright 2014-2014 Froala
  */
 .froala-element img.fr-fil,
@@ -11,13 +11,11 @@ img.fr-tag.fr-fil {
   margin: auto;
   overflow: auto;
   padding: 10px 10px 10px 3px;
-}
-.froala-element img.fr-fil:not(.fr-tni),
-img.fr-tag.fr-fil:not(.fr-tni) {
-  float: left;
+  float: left !important;
 }
 .froala-element img.fr-fil.fr-tni,
 img.fr-tag.fr-fil.fr-tni {
+  float: none !important;
   margin-left: 0 !important;
 }
 .froala-element img.fr-fir,
@@ -29,13 +27,11 @@ img.fr-tag.fr-fir {
   margin: auto;
   overflow: auto;
   padding: 10px 3px 10px 10px;
-}
-.froala-element img.fr-fir:not(.fr-tni),
-img.fr-tag.fr-fir:not(.fr-tni) {
-  float: right;
+  float: right !important;
 }
 .froala-element img.fr-fir.fr-tni,
 img.fr-tag.fr-fir.fr-tni {
+  float: none !important;
   margin-right: 0 !important;
 }
 .froala-element img.fr-fin,
@@ -48,6 +44,24 @@ img.fr-tag.fr-fin {
   overflow: auto;
   padding: 10px 0;
   float: none;
+}
+.froala-element a.fr-file,
+a.fr-file {
+  position: relative;
+}
+.froala-element a.fr-file:before,
+a.fr-file:before {
+  position: relative;
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\f0c6";
+  top: 0;
+  padding-right: 3px;
 }
 .froala-element hr,
 hr.fr-tag {
@@ -92,7 +106,7 @@ blockquote.fr-tag {
 .froala-element ol,
 ul.fr-tag,
 ol.fr-tag {
-  padding-left: 20px;
+  padding-left: 25px;
 }
 .froala-element table,
 table.fr-tag {
@@ -100,6 +114,10 @@ table.fr-tag {
   empty-cells: show;
   width: 100%;
   margin-bottom: 10px;
+  margin-top: 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 .froala-element table td,
 table.fr-tag td {
@@ -108,10 +126,9 @@ table.fr-tag td {
 }
 .froala-element p,
 p.fr-tag {
-  margin-top: 0;
-  margin-bottom: 10px;
+  margin: 0 0 10px;
 }
-.froala-element h1:not([class]),
+.froala-element h1,
 h1[class="fr-tag"] {
   font-size: 36px;
   line-height: 1.1;
@@ -119,7 +136,7 @@ h1[class="fr-tag"] {
   margin-top: 20px;
   margin-bottom: 10px;
 }
-.froala-element h2:not([class]),
+.froala-element h2,
 h2[class="fr-tag"] {
   font-size: 30px;
   line-height: 1.1;
@@ -127,7 +144,7 @@ h2[class="fr-tag"] {
   margin-top: 20px;
   margin-bottom: 10px;
 }
-.froala-element h3:not([class]),
+.froala-element h3,
 h3[class="fr-tag"] {
   font-size: 24px;
   line-height: 1.1;
@@ -135,7 +152,7 @@ h3[class="fr-tag"] {
   margin-top: 20px;
   margin-bottom: 10px;
 }
-.froala-element h4:not([class]),
+.froala-element h4,
 h4[class="fr-tag"] {
   font-size: 18px;
   line-height: 1.1;
@@ -143,7 +160,7 @@ h4[class="fr-tag"] {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-.froala-element h5:not([class]),
+.froala-element h5,
 h5[class="fr-tag"] {
   font-size: 14px;
   line-height: 1.1;
@@ -151,11 +168,24 @@ h5[class="fr-tag"] {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-.froala-element h6:not([class]),
+.froala-element h6,
 h6[class="fr-tag"] {
   font-size: 12px;
   line-height: 1.1;
   font-weight: 400;
   margin-top: 10px;
   margin-bottom: 10px;
+}
+.fr-fvn {
+  float: none;
+  display: block !important;
+  text-align: center !important;
+}
+.fr-fvl {
+  float: left;
+  margin: 10px 10px 10px 1px;
+}
+.fr-fvr {
+  float: right;
+  margin: 10px 1px 10px 10px;
 }

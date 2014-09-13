@@ -1,5 +1,5 @@
 /*!
- * froala_editor v1.1.9 (http://editor.froala.com)
+ * froala_editor v1.2.1 (http://editor.froala.com)
  * Copyright 2014-2014 Froala
  */
 
@@ -28,6 +28,7 @@ $.Editable.LANGS['nl'] = {
     "Heading 4": "Kop 4",
     "Heading 5": "Kop 5",
     "Heading 6": "Kop 6",
+    "Block Style": "Blok stijl",
     "Alignment": "Uitlijning",
     "Align Left": "Links uitlijnen",
     "Align Center": "Centreren",
@@ -53,6 +54,7 @@ $.Editable.LANGS['nl'] = {
     "Insert image": "Afbeelding invoegen",
     "Drop image": "Drop afbeelding",
     "or click": "of klik op",
+    "or": "of",
     "Enter URL": "URL invoeren",
     "Please wait!": "Even geduld aub!",
     "Are you sure? Image will be deleted.": "Weet je het zeker? Opname wordt verwijderd.",

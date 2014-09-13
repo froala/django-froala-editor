@@ -1,5 +1,5 @@
 /*!
- * froala_editor v1.1.9 (http://editor.froala.com)
+ * froala_editor v1.2.1 (http://editor.froala.com)
  * Copyright 2014-2014 Froala
  */
 
@@ -28,6 +28,7 @@ $.Editable.LANGS['es'] = {
     "Heading 4": "Encabezado 4",
     "Heading 5": "Encabezado 5",
     "Heading 6": "Encabezado 6",
+    "Block Style": "Estilo de bloque",
     "Alignment": "Alineaci\u00f3n",
     "Align Left": "Alinear a la izquierda",
     "Align Center": "Alinear al centro",
@@ -53,6 +54,7 @@ $.Editable.LANGS['es'] = {
     "Insert image": "Insertar imagen",
     "Drop image": "Soltar la imagen",
     "or click": "o haga clic en",
+    "or": "o",
     "Enter URL": "Escribir la URL",
     "Please wait!": "Por favor, espere!",
     "Are you sure? Image will be deleted.": "\u00bfEst\u00e1 seguro? Imagen ser\u00e1 borrada.",
