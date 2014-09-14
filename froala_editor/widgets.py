@@ -29,7 +29,10 @@ class FroalaEditor(widgets.Textarea):
         except NoReverseMatch:
             default_options['imageUpload'] = False
         settings_options = getattr(settings, 'FROALA_EDITOR_OPTIONS', {})
-        options = dict(default_options.items() + settings_options.items() + self.options.items())
+        # options = dict(default_options.items() + settings_options.items() + self.options.items())
+        options = dict(default_options.items()).copy()
+        options.update(settings_options.items())
+        options.update(self.options.items())
 
         if self.theme:
             options['theme'] = self.theme
