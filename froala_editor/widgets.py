@@ -59,7 +59,6 @@ class FroalaEditor(widgets.Textarea):
         js = ('froala_editor/js/froala_editor.min.js',)
 
         if self.include_jquery:
-            print self.include_jquery
             js = ('froala_editor/js/libs/jquery-1.11.1.min.js',) + js
 
         if self.theme:
