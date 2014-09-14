@@ -126,12 +126,12 @@ You may provide the name of the theme to be used as ``theme`` argument to ``Froa
         content = FroalaField(theme='dark')
 
 
-``FROALA_EDITOR_THEME`` can be set in ``settings.py`` making all instances of the editor to use a theme. However, ``theme`` argument in ``FroalaField`` and ``FroalaEditor`` overrides ``FROALA_EDITOR_THEME``. Using a theme named 'dark' would require the existence of the file ``froala_editor/static/froala_editor/css/themes/dark.min.css``. Only 'dark' theme is available for now with the package.
+``FROALA_EDITOR_THEME`` can be set in ``settings.py`` making all instances of the editor to use a theme. However, ``theme`` argument in ``FroalaField`` and ``FroalaEditor`` overrides ``FROALA_EDITOR_THEME``. Using a theme named 'dark' would require the existence of the file ``froala_editor/static/froala_editor/css/themes/dark.min.css``. Available themes are: 'dark', 'gray' and 'red'.
 
 
 plugins
 ^^^^^^^^^^
-Froala Editor comes with the plugins: block style, text & background colors, font size, font family, insert video, insert table and media manager. By default, all plugins are enabled by default in this package. See `http://editor.froala.com/plugins <http://editor.froala.com/plugins>`_ for all available plugins.
+Froala Editor comes with the plugins: block style, text & background colors, font size, font family, insert video, insert table, media manager, lists and file upload. By default, all plugins are enabled by default in this package. See `http://editor.froala.com/plugins <http://editor.froala.com/plugins>`_ for all available plugins.
 
 ``FROALA_EDITOR_PLUGINS`` can be set in ``settings.py`` to tell which plugins should all instances of Froala Editor be using. By default, it is
 
