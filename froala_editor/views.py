@@ -1,6 +1,7 @@
 from django.views.decorators.csrf import csrf_exempt
 import json
-from django.http import JsonResponse
+# from django.http import JsonResponse
+from django.http import HttpResponse
 from django.conf import settings
 import uuid
 import os
@@ -30,4 +31,5 @@ def image_upload(request):
             fd.write(chunk)
         fd.close()
         link = '%s%s/%s' % (media_url, upload_to, file_name)
-        return JsonResponse({'link': link})
+        # return JsonResponse({'link': link})
+        return HttpResponse(json.dumps({'link': link}), content_type="application/json")
