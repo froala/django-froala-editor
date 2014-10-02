@@ -64,7 +64,8 @@ In case of jQuery conflict (when your project template already has jQuery), you 
 .. code-block:: python
 
     <link href="{{STATIC_URL}}froala_editor/css/font-awesome.min.css" type="text/css" media="all" rel="stylesheet" />
-    <link href="{{STATIC_URL}}froala_editor/css/froala_editor.min.css" type="text/css" media="all" rel="stylesheet" />
+    <link href="{{STATIC_URL}}froala_editor/css/froala_editor.min.css" type="text/css" media="all" rel="stylesheet"
+    <link href="{{STATIC_URL}}froala_editor/css/froala_page.min.css" type="text/css" media="all" rel="stylesheet" />
     <script type="text/javascript" src="{{STATIC_URL}}froala_editor/js/froala_editor.min.js"></script
 
 
@@ -137,7 +138,7 @@ Froala Editor comes with the plugins: block style, text & background colors, fon
 
 .. code-block:: python
 
-    FROALA_EDITOR_PLUGINS = ('font_size', 'font_family', 'colors', 'block_styles', 'video', 'tables', 'media_manager', 'lists', 'file_upload')
+    FROALA_EDITOR_PLUGINS = ('font_size', 'font_family', 'colors', 'block_styles', 'video', 'tables', 'media_manager', 'lists', 'file_upload', 'char_counter')
 
 The usage of ``plugins`` argument with ``FroalaEditor`` or ``FroalaField`` overrides this for that particular instance.
 
@@ -166,4 +167,4 @@ License
 ===============
 
 This package is available under BSD License.
-However, Froala editor is free only for non-commercial projects. See http://editor.froala.com/download for licensing.
+However, Froala editor is free only for non-commercial projects. For commercial applications see http://editor.froala.com/pricing for licensing.
