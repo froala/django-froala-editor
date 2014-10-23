@@ -1,5 +1,5 @@
 /*!
- * froala_editor v1.2.2 (http://editor.froala.com)
+ * froala_editor v1.2.3 (http://editor.froala.com)
  * Copyright 2014-2014 Froala
  */
 
@@ -15,8 +15,8 @@ $.Editable.LANGS['nl'] = {
     "Strikethrough": "Doorhalen",
     "Font Size": "Letter grootte",
     "Color": "Kleur",
-    "Background Color": "Achtergrondkleur",
-    "Text Color": "Tekstkleur",
+    "Background": "Achtergrond",
+    "Text": "Tekst",
     "Format Block": "Opmaak",
     "Normal": "Normaal",
     "Paragraph": "Paragraaf",
@@ -51,7 +51,6 @@ $.Editable.LANGS['nl'] = {
     "Replace Image": "Vervang afbeelding",
     "Remove Image": "Afbeelding verwijderen",
     "Title": "Titel",
-    "Insert image": "Afbeelding invoegen",
     "Drop image": "Drop afbeelding",
     "or click": "of klik op",
     "or": "of",

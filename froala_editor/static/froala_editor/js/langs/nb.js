@@ -1,5 +1,5 @@
 /*!
- * froala_editor v1.2.2 (http://editor.froala.com)
+ * froala_editor v1.2.3 (http://editor.froala.com)
  * Copyright 2014-2014 Froala
  */
 
@@ -15,8 +15,8 @@ $.Editable.LANGS['nb'] = {
     "Strikethrough": "Gjennomstreket",
     "Font Size": "St\u00f8rrelse",
     "Color": "Farge",
-    "Background Color": "Bakgrunnsfarge",
-    "Text Color": "Tekstfarge",
+    "Background": "Bakgrunn",
+    "Text": "Tekst",
     "Format Block": "Stiler",
     "Normal": "Normal",
     "Paragraph": "Avsnitt",
@@ -51,7 +51,6 @@ $.Editable.LANGS['nb'] = {
     "Replace Image": "Bytt bilde",
     "Remove Image": "Fjern bilde",
     "Title": "Tittel",
-    "Insert image": "Sett inn bilde",
     "Drop image": "Slippe bilde",
     "or click": "eller klikk",
     "or": "eller",

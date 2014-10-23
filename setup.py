@@ -12,7 +12,7 @@ setup(
     long_description=open('README.rst').read(),
     include_package_data=True,
     zip_safe=False,
-    keywords='froala,django,admin,wysiwyg,editor,text,editor',
+    keywords='froala,django,admin,wysiwyg,editor,text,html,editor',
     classifiers=[
         'Environment :: Web Environment',
         'Framework :: Django',

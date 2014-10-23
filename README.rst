@@ -65,7 +65,7 @@ In case of jQuery conflict (when your project template already has jQuery), you 
 
     <link href="{{STATIC_URL}}froala_editor/css/font-awesome.min.css" type="text/css" media="all" rel="stylesheet" />
     <link href="{{STATIC_URL}}froala_editor/css/froala_editor.min.css" type="text/css" media="all" rel="stylesheet" />
-    <link href="{{STATIC_URL}}froala_editor/css/froala_page.min.css" type="text/css" media="all" rel="stylesheet" />
+    <link href="{{STATIC_URL}}froala_editor/css/froala_style.min.css" type="text/css" media="all" rel="stylesheet" />
     <script type="text/javascript" src="{{STATIC_URL}}froala_editor/js/froala_editor.min.js"></script>
 
 

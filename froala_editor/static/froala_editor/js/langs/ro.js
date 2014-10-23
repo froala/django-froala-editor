@@ -1,5 +1,5 @@
 /*!
- * froala_editor v1.2.2 (http://editor.froala.com)
+ * froala_editor v1.2.3 (http://editor.froala.com)
  * Copyright 2014-2014 Froala
  */
 
@@ -15,8 +15,8 @@ $.Editable.LANGS['ro'] = {
     "Strikethrough": "T\u0103iat",
     "Font Size": "Dimensiune font",
     "Color": "Culoare",
-    "Background Color": "Culoare fundal",
-    "Text Color": "Culoare text",
+    "Background": "Fundal",
+    "Text": "Text",
     "Format Block": "Formate",
     "Normal": "Normal",
     "Paragraph": "Paragraf",
@@ -51,7 +51,6 @@ $.Editable.LANGS['ro'] = {
     "Replace Image": "\u00cenlocuie\u015fte imaginea",
     "Remove Image": "\u0218terge imaginea",
     "Title": "Titlu",
-    "Insert image": "Inserare imagine",
     "Drop image": "Trage imagine",
     "or click": "sau f\u0103 click",
     "or": "sau",
