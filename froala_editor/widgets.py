@@ -12,8 +12,8 @@ class FroalaEditor(widgets.Textarea):
                                   'font_size', 'font_family', 'colors', 'block_styles', 'video', 'tables', 'media_manager', 'lists', 'file_upload'
                                   )))
         self.buttons = kwargs.pop('buttons', getattr(settings, 'FROALA_EDITOR_BUTTONS', (
-            'bold', 'italic', 'underline', 'strikeThrough', 'blockStyle', 'align',
-            'outdent', 'indent', 'createLink', 'insertImage', 'insertHorizontalRule',
+            'bold', 'italic', 'underline', 'strikeThrough', 'sep','blockStyle', 'align',
+            'outdent', 'indent', 'sep', 'createLink', 'insertImage', 'insertHorizontalRule',
             'undo', 'redo', 'html'
         )))
         self.theme = kwargs.pop('theme', None)
