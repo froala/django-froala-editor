@@ -42,6 +42,9 @@ class FroalaEditor(widgets.Textarea):
         if self.theme:
             options['theme'] = self.theme
 
+        if self.buttons:
+            options['buttons'] = self.buttons
+
         return json.dumps(options)
 
     def render(self, name, value, attrs=None):

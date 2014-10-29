@@ -30,7 +30,7 @@ class FroalaField(Field):
 
     def formfield(self, **kwargs):
         defaults = {
-            'widget': FroalaEditor(options=self.options, theme=self.theme, buttons=self.buttons,plugins=self.plugins,
+            'widget': FroalaEditor(options=self.options, theme=self.theme, buttons=self.buttons, plugins=self.plugins,
                                    include_jquery=self.include_jquery, image_upload=self.image_upload,
                                    file_upload=self.file_upload)}
         defaults.update(kwargs)
