@@ -13,9 +13,10 @@ class FroalaField(Field):
                                   'font_size', 'font_family', 'colors', 'block_styles', 'video', 'tables', 'media_manager', 'lists', 'file_upload', 'char_counter'
                                   )))
         self.buttons = kwargs.pop('buttons', getattr(settings, 'FROALA_EDITOR_BUTTONS', (
-            'bold', 'italic', 'underline', 'strikeThrough', 'sep','blockStyle', 'align',
-            'outdent', 'indent', 'sep', 'createLink', 'insertImage', 'insertHorizontalRule',
-            'undo', 'redo', 'html'
+            'bold', 'italic', 'underline', 'strikeThrough', 'font_size', 'font_family', 'colors',
+            'sep', 'block_styles', 'blockStyle', 'align', 'lists', 'outdent', 'indent',
+            'sep', 'createLink', 'insertImage', 'video', 'media_manager', 'file_upload', 'tables',
+            'insertHorizontalRule', 'undo', 'redo', 'html'
         )))
         self.include_jquery = kwargs.pop('include_jquery', getattr(settings, 'FROALA_INCLUDE_JQUERY', True))
         self.image_upload = kwargs.pop('image_upload', True)

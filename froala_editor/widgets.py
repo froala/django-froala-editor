@@ -9,12 +9,14 @@ class FroalaEditor(widgets.Textarea):
     def __init__(self, *args, **kwargs):
         self.options = kwargs.pop('options', {})
         self.plugins = kwargs.pop('plugins', getattr(settings, 'FROALA_EDITOR_PLUGINS', (
-                                  'font_size', 'font_family', 'colors', 'block_styles', 'video', 'tables', 'media_manager', 'lists', 'file_upload'
+                                  'font_size', 'font_family', 'colors', 'block_styles', 'video',
+                                  'tables', 'media_manager', 'lists', 'file_upload'
                                   )))
         self.buttons = kwargs.pop('buttons', getattr(settings, 'FROALA_EDITOR_BUTTONS', (
-            'bold', 'italic', 'underline', 'strikeThrough', 'sep','blockStyle', 'align',
-            'outdent', 'indent', 'sep', 'createLink', 'insertImage', 'insertHorizontalRule',
-            'undo', 'redo', 'html'
+            'bold', 'italic', 'underline', 'strikeThrough', 'font_size', 'font_family', 'colors',
+            'sep', 'block_styles', 'blockStyle', 'align', 'lists', 'outdent', 'indent',
+            'sep', 'createLink', 'insertImage', 'video', 'media_manager', 'file_upload', 'tables',
+            'insertHorizontalRule', 'undo', 'redo', 'html'
         )))
         self.theme = kwargs.pop('theme', None)
         self.include_jquery = kwargs.pop('include_jquery', True)
