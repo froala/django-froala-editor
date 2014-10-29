@@ -9,8 +9,15 @@ class FroalaEditor(widgets.Textarea):
     def __init__(self, *args, **kwargs):
         self.options = kwargs.pop('options', {})
         self.plugins = kwargs.pop('plugins', getattr(settings, 'FROALA_EDITOR_PLUGINS', (
-                                  'font_size', 'font_family', 'colors', 'block_styles', 'video', 'tables', 'media_manager', 'lists', 'file_upload'
+                                  'font_size', 'font_family', 'colors', 'block_styles', 'video',
+                                  'tables', 'media_manager', 'lists', 'file_upload'
                                   )))
+        self.buttons = kwargs.pop('buttons', getattr(settings, 'FROALA_EDITOR_BUTTONS', (
+            'bold', 'italic', 'underline', 'strikeThrough', 'fontSize', 'fontFamily', 'color',
+            'sep', 'formatBlock', 'blockStyle', 'align', 'insertOrderedList', 'insertUnorderedList',
+            'outdent', 'indent', 'sep', 'createLink', 'insertImage', 'insertVideo', 'uploadFile', 'table',
+            'insertHorizontalRule', 'undo', 'redo', 'html'
+        )))
         self.theme = kwargs.pop('theme', None)
         self.include_jquery = kwargs.pop('include_jquery', True)
         self.image_upload = kwargs.pop('image_upload', True)
@@ -37,8 +44,10 @@ class FroalaEditor(widgets.Textarea):
         if self.theme:
             options['theme'] = self.theme
 
-        return json.dumps(options)
+        if self.buttons:
+            options['buttons'] = self.buttons
 
+        return json.dumps(options)
 
     def render(self, name, value, attrs=None):
         html = super(FroalaEditor, self).render(name, value, attrs)
