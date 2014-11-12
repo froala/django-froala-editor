@@ -1,4 +1,3 @@
-from django.views.decorators.csrf import csrf_exempt
 import json
 # from django.http import JsonResponse
 from django.http import HttpResponse
@@ -7,7 +6,6 @@ import uuid
 import os
 
 
-@csrf_exempt
 def image_upload(request):
     if 'file' in request.FILES:
         file = request.FILES['file']
