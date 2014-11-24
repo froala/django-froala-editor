@@ -1,5 +1,5 @@
 /*!
- * froala_editor v1.2.3 (http://editor.froala.com)
+ * froala_editor v1.2.4 (http://editor.froala.com)
  * Copyright 2014-2014 Froala
  */
 
@@ -83,7 +83,11 @@ $.Editable.LANGS['nl'] = {
     "Delete row": "Verwijder rij",
     "Insert column before": "Voeg kolom in voor",
     "Insert column after": "Voeg kolom in na",
-    "Delete column": "Verwijder kolom"
+    "Delete column": "Verwijder kolom",
+    "Uploading image": "Afbeelding uploaden",
+    "Upload File": "Upload bestand",
+    "Drop File": "Drop bestand",
+    "Clear formatting": "Verwijder opmaak"
   },
   direction: "ltr"
 };

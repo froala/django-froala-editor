@@ -1,5 +1,5 @@
 /*!
- * froala_editor v1.2.3 (http://editor.froala.com)
+ * froala_editor v1.2.4 (http://editor.froala.com)
  * Copyright 2014-2014 Froala
  */
 
@@ -83,7 +83,11 @@ $.Editable.LANGS['nb'] = {
     "Delete row": "Slett rad",
     "Insert column before": "Sett inn kolonne f\u00f8r",
     "Insert column after": "Sett inn kolonne etter",
-    "Delete column": "Slett kolonne"
+    "Delete column": "Slett kolonne",
+    "Uploading image": "Opplasting bilde",
+    "Upload File": "Opplastingsfil",
+    "Drop File": "Slippe fil",
+    "Clear formatting": "Fjerne formatering"
   },
   direction: "ltr"
 };

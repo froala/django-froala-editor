@@ -1,5 +1,5 @@
 /*!
- * froala_editor v1.2.3 (http://editor.froala.com)
+ * froala_editor v1.2.4 (http://editor.froala.com)
  * Copyright 2014-2014 Froala
  */
 
@@ -83,7 +83,11 @@ $.Editable.LANGS['es'] = {
     "Delete row": "Eliminar Fila",
     "Insert column before": "Insertar columna antes",
     "Insert column after": "Insertar columna despu\u00e9s",
-    "Delete column": "Eliminar columna"
+    "Delete column": "Eliminar columna",
+    "Uploading image": "Subiendo imagen",
+    "Upload File": "Subir archivo",
+    "Drop File": "Soltar archivo",
+    "Clear formatting": "Quitar el formato"
   },
   direction: "ltr"
 };
