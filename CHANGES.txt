@@ -4,3 +4,4 @@ v0.8, Jul 14, 2014 -- Fixed style conflicts with Django admin.
 v0.9, Sep 02, 2014 -- Added plugin, theme support.
 v1.2.1, Sep 13, 2014 -- Upgraded Froala to 1.2.1, Django 1.7 and Python 3 fixes
 v1.2.3.1, Nov 12, 2014 -- Added csrf protection for image uploads
+v1.2.4.1, Jan 11, 2015 -- Fixed possible path traversal attack
