@@ -21,4 +21,5 @@ def image_upload(request):
         file_name = default_storage.get_available_name(os.path.join(upload_to, the_file.name))
         default_storage.save(file_name, the_file)
         link = default_storage.url(file_name)
+        # return JsonResponse({'link': link})
         return HttpResponse(json.dumps({'link': link}), content_type="application/json")
