@@ -18,8 +18,7 @@ def image_upload(request):
         # filesize = len(file['content'])
         # filetype = file['content-type']
         upload_to = getattr(settings, 'FROALA_UPLOAD_PATH', 'uploads/froala_editor/images/')
-        file_name = default_storage.get_available_name(os.path.join(upload_to, the_file.name))
-        default_storage.save(file_name, the_file)
-        link = default_storage.url(file_name)
+        path = default_storage.save(os.path.join(upload_to, the_file.name), the_file)
+        link = default_storage.url(path)
         # return JsonResponse({'link': link})
         return HttpResponse(json.dumps({'link': link}), content_type="application/json")
