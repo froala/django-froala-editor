@@ -12,8 +12,8 @@ class FroalaEditor(widgets.Textarea):
             'font_size', 'font_family', 'colors', 'block_styles', 'video', 'tables', 'media_manager', 'lists',
             'file_upload'
         )))
-        self.theme = kwargs.pop('theme', None)
-        self.include_jquery = kwargs.pop('include_jquery', True)
+        self.theme = kwargs.pop('theme', getattr(settings, 'FROALA_EDITOR_THEME', None))
+        self.include_jquery = kwargs.pop('include_jquery', getattr(settings, 'FROALA_INCLUDE_JQUERY', True))
         self.image_upload = kwargs.pop('image_upload', True)
         self.file_upload = kwargs.pop('file_upload', True)
         super(FroalaEditor, self).__init__(*args, **kwargs)
