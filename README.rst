@@ -2,7 +2,7 @@
 django-froala-editor
 ======================
 
-django-froala-editor package helps integrate `Froala WYSIWYG editor <http://editor.froala.com/>`_ with Django.
+django-froala-editor package helps integrate `Froala WYSIWYG HTML editor <https://froala.com/wysiwyg-editor/>`_ with Django.
 
 
 Getting started
@@ -86,7 +86,7 @@ Customization
 options
 ^^^^^^^^^
 
-Froala Editor provides several options for customizing the editor. See http://editor.froala.com/docs for all available options.
+Froala Editor provides several options for customizing the editor. See https://froala.com/wysiwyg-editor/docs for all available options.
 You can provide a dictionary of these options as ``FROALA_EDITOR_OPTIONS`` setting in ``settings.py``. These options would then be used for all instances of the WYSIWYG editor in the project.
 
 Options for individual field can also be provided via ``FroalaField`` or ``FroalEditor`` class. This overrides any options set via ``FROALA_EDITOR_OPTIONS``.:
@@ -132,7 +132,7 @@ You may provide the name of the theme to be used as ``theme`` argument to ``Froa
 
 plugins
 ^^^^^^^^^^
-Froala Editor comes with the plugins: block style, text & background colors, font size, font family, insert video, insert table, media manager, lists and file upload. By default, all plugins are enabled by default in this package. See `http://editor.froala.com/plugins <http://editor.froala.com/plugins>`_ for all available plugins.
+Froala Editor comes with the plugins: block style, text & background colors, font size, font family, insert video, insert table, media manager, lists and file upload. By default, all plugins are enabled by default in this package. See `https://froala.com/wysiwyg-editor/docs/plugins <https://froala.com/wysiwyg-editor/docs/plugins>`_ for all available plugins.
 
 ``FROALA_EDITOR_PLUGINS`` can be set in ``settings.py`` to tell which plugins should all instances of Froala Editor be using. By default, it is
 
@@ -167,4 +167,4 @@ License
 ===============
 
 This package is available under BSD License.
-However, Froala editor is free only for non-commercial projects. For commercial applications see http://editor.froala.com/pricing for licensing.
+See https://froala.com/wysiwyg-editor/pricing for licensing the Froala Editor.

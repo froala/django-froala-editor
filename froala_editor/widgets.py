@@ -10,7 +10,7 @@ class FroalaEditor(widgets.Textarea):
         self.options = kwargs.pop('options', {})
         self.plugins = kwargs.pop('plugins', getattr(settings, 'FROALA_EDITOR_PLUGINS', (
             'font_size', 'font_family', 'colors', 'block_styles', 'video', 'tables', 'media_manager', 'lists',
-            'file_upload'
+            'file_upload', 'entities'
         )))
         self.theme = kwargs.pop('theme', getattr(settings, 'FROALA_EDITOR_THEME', None))
         self.include_jquery = kwargs.pop('include_jquery', getattr(settings, 'FROALA_INCLUDE_JQUERY', True))
