@@ -46,7 +46,7 @@ Usage
     from froala_editor.widgets import FroalaEditor
 
     class PageForm(forms.ModelForm):
-        content = models.TextField(widget=FroalaEditor)
+        content = forms.CharField(widget=FroalaEditor)
 
 
 Usage outside admin
