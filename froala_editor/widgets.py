@@ -9,8 +9,10 @@ class FroalaEditor(widgets.Textarea):
     def __init__(self, *args, **kwargs):
         self.options = kwargs.pop('options', {})
         self.plugins = kwargs.pop('plugins', getattr(settings, 'FROALA_EDITOR_PLUGINS', (
-            'font_size', 'font_family', 'colors', 'block_styles', 'video', 'tables', 'media_manager', 'lists',
-            'file_upload', 'entities'
+            'font_size', 'font_family', 'colors', 'video',
+            'lists', 'char_counter', 'entities', 'align', 'char_counter', 'code_view',
+            'emoticons', 'file', 'fullscreen', 'image', 'image_manager', 'inline_style', 'line_breaker',
+            'link', 'paragraph_format', 'paragraph_style', 'quote', 'save', 'table', 'url', 'video'
         )))
         self.theme = kwargs.pop('theme', getattr(settings, 'FROALA_EDITOR_THEME', None))
         self.include_jquery = kwargs.pop('include_jquery', getattr(settings, 'FROALA_INCLUDE_JQUERY', True))
@@ -56,14 +58,14 @@ class FroalaEditor(widgets.Textarea):
         str = """
         <script>
             $(function(){
-                $('#%s').editable(%s)
+                $('#%s').froalaEditor(%s)
             });
         </script>""" % (el_id, options)
         return str
 
     def _media(self):
         css = {
-            'all': ('froala_editor/css/font-awesome.min.css', 'froala_editor/css/froala_editor.min.css',
+            'all': ('froala_editor/css/froala_editor.min.css',
                     'froala_editor/css/froala_style.min.css', 'froala_editor/css/froala-django.css')
         }
         js = ('froala_editor/js/froala_editor.min.js','froala_editor/js/froala-django.js',)
