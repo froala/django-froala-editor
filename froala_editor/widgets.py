@@ -65,7 +65,7 @@ class FroalaEditor(widgets.Textarea):
 
     def _media(self):
         css = {
-            'all': ('froala_editor/css/froala_editor.min.css',
+            'all': ('froala_editor/css/font-awesome.min.css', 'froala_editor/css/froala_editor.min.css',
                     'froala_editor/css/froala_style.min.css', 'froala_editor/css/froala-django.css')
         }
         js = ('froala_editor/js/froala_editor.min.js','froala_editor/js/froala-django.js',)
