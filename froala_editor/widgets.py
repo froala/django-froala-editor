@@ -9,13 +9,16 @@ class FroalaEditor(widgets.Textarea):
     def __init__(self, *args, **kwargs):
         self.options = kwargs.pop('options', {})
         self.plugins = kwargs.pop('plugins', getattr(settings, 'FROALA_EDITOR_PLUGINS', (
-            'font_size', 'font_family', 'colors', 'block_styles', 'video', 'tables', 'media_manager', 'lists',
-            'file_upload', 'entities'
+            'font_size', 'font_family', 'colors', 'video',
+            'lists', 'char_counter', 'entities', 'align', 'char_counter', 'code_view',
+            'emoticons', 'file', 'fullscreen', 'image', 'image_manager', 'inline_style', 'line_breaker',
+            'link', 'paragraph_format', 'paragraph_style', 'quote', 'save', 'table', 'url', 'video'
         )))
         self.theme = kwargs.pop('theme', getattr(settings, 'FROALA_EDITOR_THEME', None))
         self.include_jquery = kwargs.pop('include_jquery', getattr(settings, 'FROALA_INCLUDE_JQUERY', True))
         self.image_upload = kwargs.pop('image_upload', True)
         self.file_upload = kwargs.pop('file_upload', True)
+        self.language = (getattr(settings, 'FROALA_EDITOR_OPTIONS', {})).get('language', '')
         super(FroalaEditor, self).__init__(*args, **kwargs)
 
     def get_options(self):
@@ -36,7 +39,6 @@ class FroalaEditor(widgets.Textarea):
         options.update(settings_options.items())
         options.update(self.options.items())
 
-
         if self.theme:
             options['theme'] = self.theme
 
@@ -56,7 +58,7 @@ class FroalaEditor(widgets.Textarea):
         str = """
         <script>
             $(function(){
-                $('#%s').editable(%s)
+                $('#%s').froalaEditor(%s)
             });
         </script>""" % (el_id, options)
         return str
@@ -73,6 +75,9 @@ class FroalaEditor(widgets.Textarea):
 
         if self.theme:
             css['all'] += ('froala_editor/css/themes/' + self.theme + '.css',)
+
+        if self.language:
+            js += ('froala_editor/js/languages/' + self.language + '.js',)
 
         for plugin in self.plugins:
             js += ('froala_editor/js/plugins/' + plugin + '.min.js',)
