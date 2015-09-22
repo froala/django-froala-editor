@@ -1,16 +1,8 @@
-form .fr-dropdown ul.fr-dropdown-menu {
-    margin-left: 0;
-}
-
-form .froala-element p {
+.fr-wrapper .fr-view p {
     margin-left: 0;
     padding-left: 0;
 }
 
-.froala-box {
+.fr-box.fr-top.fr-basic{
     clear: both;
-}
-
-.form-row {
-    overflow: visible;
 }
