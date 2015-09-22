@@ -4,6 +4,7 @@ from django.utils.safestring import mark_safe
 from django.conf import settings
 import json
 from . import PLUGINS
+from . import PLUGINS_WITH_CSS
 
 
 class FroalaEditor(widgets.Textarea):
@@ -73,6 +74,8 @@ class FroalaEditor(widgets.Textarea):
 
         for plugin in self.plugins:
             js += ('froala_editor/js/plugins/' + plugin + '.min.js',)
+            if plugin in PLUGINS_WITH_CSS:
+                css['all'] += ('froala_editor/css/plugins/' + plugin + '.min.css',)
 
         return Media(css=css, js=js)
 
