@@ -1,7 +1,7 @@
 from django.db.models import Field
 from froala_editor.widgets import FroalaEditor
 from django.conf import settings
-
+from . import PLUGINS
 
 class FroalaField(Field):
     description = "Froala Editable Field"
@@ -9,9 +9,7 @@ class FroalaField(Field):
     def __init__(self, *args, **kwargs):
         self.options = kwargs.pop('options', {})
         self.theme = kwargs.pop('theme', getattr(settings, 'FROALA_EDITOR_THEME', None))
-        self.plugins = kwargs.pop('plugins', getattr(settings, 'FROALA_EDITOR_PLUGINS', (
-                                  'font_size', 'font_family', 'colors', 'block_styles', 'video', 'tables', 'media_manager', 'lists', 'file_upload', 'char_counter', 'entities'
-                                  )))
+        self.plugins = kwargs.pop('plugins', getattr(settings, 'FROALA_EDITOR_PLUGINS', PLUGINS))
         self.include_jquery = kwargs.pop('include_jquery', getattr(settings, 'FROALA_INCLUDE_JQUERY', True))
         self.image_upload = kwargs.pop('image_upload', True)
         self.file_upload = kwargs.pop('file_upload', True)
