@@ -2,7 +2,7 @@
 django-froala-editor
 ======================
 
-django-froala-editor package helps integrate `Froala WYSIWYG HTML editor <https://froala.com/wysiwyg-editor/>`_ with Django.
+django-froala-editor package helps integrate `Froala WYSIWYG HTML editor <https://froala.com/wysiwyg-editor/v2.0/>`_ with Django.
 
 
 Getting started
@@ -63,7 +63,7 @@ In case of jQuery conflict (when your project template already has jQuery), you 
 
 .. code-block:: python
 
-    <link href="{{STATIC_URL}}froala_editor/css/font-awesome.min.css" type="text/css" media="all" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" type="text/css" media="all" rel="stylesheet" />
     <link href="{{STATIC_URL}}froala_editor/css/froala_editor.min.css" type="text/css" media="all" rel="stylesheet" />
     <link href="{{STATIC_URL}}froala_editor/css/froala_style.min.css" type="text/css" media="all" rel="stylesheet" />
     <script type="text/javascript" src="{{STATIC_URL}}froala_editor/js/froala_editor.min.js"></script>
@@ -86,7 +86,7 @@ Customization
 options
 ^^^^^^^^^
 
-Froala Editor provides several options for customizing the editor. See https://froala.com/wysiwyg-editor/docs for all available options.
+Froala Editor provides several options for customizing the editor. See https://froala.com/wysiwyg-editor/v2.0/docs for all available options.
 You can provide a dictionary of these options as ``FROALA_EDITOR_OPTIONS`` setting in ``settings.py``. These options would then be used for all instances of the WYSIWYG editor in the project.
 
 Options for individual field can also be provided via ``FroalaField`` or ``FroalEditor`` class. This overrides any options set via ``FROALA_EDITOR_OPTIONS``.:
@@ -98,7 +98,7 @@ Options for individual field can also be provided via ``FroalaField`` or ``Froal
 
     class Page(models.Model):
         content = FroalaField(options={
-            'inlineMode': True,
+            'toolbarInline': True,
         })
 
 .. code-block:: python
@@ -108,7 +108,7 @@ Options for individual field can also be provided via ``FroalaField`` or ``Froal
 
     class PageForm(forms.ModelForm):
         content = forms.TextField(widget=FroalaEditor(options={
-            'inlineMode': True,
+            'toolbarInline': True,
         }        ))
 
 
@@ -132,13 +132,16 @@ You may provide the name of the theme to be used as ``theme`` argument to ``Froa
 
 plugins
 ^^^^^^^^^^
-Froala Editor comes with the plugins: block style, text & background colors, font size, font family, insert video, insert table, media manager, lists and file upload. By default, all plugins are enabled by default in this package. See `https://froala.com/wysiwyg-editor/docs/plugins <https://froala.com/wysiwyg-editor/docs/plugins>`_ for all available plugins.
+Froala Editor comes with the plugins: block style, text & background colors, font size, font family, insert video, insert table, media manager, lists and file upload. By default, all plugins are enabled by default in this package. See `https://froala.com/wysiwyg-editor/v2.0/docs/plugins <https://froala.com/wysiwyg-editor/v2.0/docs/plugins>`_ for all available plugins.
 
 ``FROALA_EDITOR_PLUGINS`` can be set in ``settings.py`` to tell which plugins should all instances of Froala Editor be using. By default, it is
 
 .. code-block:: python
 
-    FROALA_EDITOR_PLUGINS = ('font_size', 'font_family', 'colors', 'block_styles', 'video', 'tables', 'media_manager', 'lists', 'file_upload', 'char_counter', 'urls', 'fullscreen', 'inline_styles', 'entities')
+    FROALA_EDITOR_PLUGINS = ('align', 'char_counter', 'code_view', 'colors', 'emoticons', 'entities', 'file',
+            'font_family', 'font_size', 'fullscreen', 'image_manager', 'image', 'inline_style',
+            'line_breaker', 'link', 'lists', 'paragraph_format', 'paragraph_style', 'quote',
+            'save', 'table', 'url', 'video')
 
 The usage of ``plugins`` argument with ``FroalaEditor`` or ``FroalaField`` overrides this for that particular instance.
 
@@ -149,7 +152,7 @@ The usage of ``plugins`` argument with ``FroalaEditor`` or ``FroalaField`` overr
     from froala_editor.fields import FroalaField
 
     class Page(models.Model):
-        content = FroalaField(plugins=('font_size', 'font_family',))
+        content = FroalaField(plugins=('font_size', 'font_family'))
 
 
 image_upload
@@ -167,4 +170,4 @@ License
 ===============
 
 This package is available under BSD License.
-See https://froala.com/wysiwyg-editor/pricing for licensing the Froala Editor.
+See https://froala.com/wysiwyg-editor/v2.0/pricing for licensing the Froala Editor.
