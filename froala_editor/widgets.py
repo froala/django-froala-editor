@@ -3,17 +3,13 @@ from django.forms import widgets, Media
 from django.utils.safestring import mark_safe
 from django.conf import settings
 import json
+from . import PLUGINS
 
 
 class FroalaEditor(widgets.Textarea):
     def __init__(self, *args, **kwargs):
         self.options = kwargs.pop('options', {})
-        self.plugins = kwargs.pop('plugins', getattr(settings, 'FROALA_EDITOR_PLUGINS', (
-            'align', 'char_counter', 'code_view', 'colors', 'emoticons', 'entities', 'file',
-            'font_family', 'font_size', 'fullscreen', 'image_manager', 'image', 'inline_style',
-            'line_breaker', 'link', 'lists', 'paragraph_format', 'paragraph_style', 'quote',
-            'save', 'table', 'url', 'video'
-        )))
+        self.plugins = kwargs.pop('plugins', getattr(settings, 'FROALA_EDITOR_PLUGINS', PLUGINS))
         self.theme = kwargs.pop('theme', getattr(settings, 'FROALA_EDITOR_THEME', None))
         self.include_jquery = kwargs.pop('include_jquery', getattr(settings, 'FROALA_INCLUDE_JQUERY', True))
         self.image_upload = kwargs.pop('image_upload', True)
@@ -38,14 +34,12 @@ class FroalaEditor(widgets.Textarea):
         options.update(settings_options.items())
         options.update(self.options.items())
 
-
         if self.theme:
             options['theme'] = self.theme
 
         json_options = json.dumps(options)
         json_options = json_options.replace('"csrftokenplaceholder"', 'getCookie("csrftoken")')
         return json_options
-
 
     def render(self, name, value, attrs=None):
         html = super(FroalaEditor, self).render(name, value, attrs)
@@ -65,10 +59,11 @@ class FroalaEditor(widgets.Textarea):
 
     def _media(self):
         css = {
-            'all': ('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css', 'froala_editor/css/froala_editor.min.css',
+            'all': ('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css',
+                    'froala_editor/css/froala_editor.min.css',
                     'froala_editor/css/froala_style.min.css', 'froala_editor/css/froala-django.css')
         }
-        js = ('froala_editor/js/froala_editor.min.js','froala_editor/js/froala-django.js',)
+        js = ('froala_editor/js/froala_editor.min.js', 'froala_editor/js/froala-django.js',)
 
         if self.include_jquery:
             js = ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js',) + js
