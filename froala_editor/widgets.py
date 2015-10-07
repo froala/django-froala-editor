@@ -14,6 +14,7 @@ class FroalaEditor(widgets.Textarea):
         self.include_jquery = kwargs.pop('include_jquery', getattr(settings, 'FROALA_INCLUDE_JQUERY', True))
         self.image_upload = kwargs.pop('image_upload', True)
         self.file_upload = kwargs.pop('file_upload', True)
+        self.language = (getattr(settings, 'FROALA_EDITOR_OPTIONS', {})).get('language', '')
         super(FroalaEditor, self).__init__(*args, **kwargs)
 
     def get_options(self):
@@ -70,6 +71,9 @@ class FroalaEditor(widgets.Textarea):
 
         if self.theme:
             css['all'] += ('froala_editor/css/themes/' + self.theme + '.css',)
+
+        if self.language:
+            js += ('froala_editor/js/languages/' + self.language + '.js',)
 
         for plugin in self.plugins:
             js += ('froala_editor/js/plugins/' + plugin + '.min.js',)
