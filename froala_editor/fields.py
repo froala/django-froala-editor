@@ -17,9 +17,6 @@ class FroalaField(Field):
         self.file_upload = kwargs.pop('file_upload', True)
         super(FroalaField, self).__init__(*args, **kwargs)
 
-    # TODO Migration for Django 1.7+
-    # def deconstruct(self):
-
     def get_internal_type(self):
         return "TextField"
 

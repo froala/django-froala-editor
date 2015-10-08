@@ -29,6 +29,14 @@ class FroalaEditor(widgets.Textarea):
             default_options.update([('imageUploadParams', {'csrfmiddlewaretoken': 'csrftokenplaceholder'})])
         except NoReverseMatch:
             default_options['imageUpload'] = False
+
+        try:
+            file_upload_url = reverse('froala_editor_file_upload')
+            default_options['fileUploadURL'] = file_upload_url
+            default_options.update([('fileUploadParams', {'csrfmiddlewaretoken': 'csrftokenplaceholder'})])
+        except NoReverseMatch:
+            default_options['fileUpload'] = False
+
         settings_options = getattr(settings, 'FROALA_EDITOR_OPTIONS', {})
         # options = dict(default_options.items() + settings_options.items() + self.options.items())
         options = dict(default_options.items()).copy()
