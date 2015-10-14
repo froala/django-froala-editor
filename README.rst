@@ -25,7 +25,7 @@ Add the directory `froala_editor` from this repo to your Python path.
 
     url(r'^froala_editor/', include('froala_editor.urls')),
 
-Skip this url inclusion if you don't want image upload inside WYSIWYG editor. Images from URLs can still be embedded.
+Skip this url inclusion if you don't want image and file upload inside WYSIWYG editor. Images from URLs can still be embedded.
 
 Usage
 ==============
