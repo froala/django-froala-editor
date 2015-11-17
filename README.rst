@@ -25,7 +25,7 @@ Add the directory `froala_editor` from this repo to your Python path.
 
     url(r'^froala_editor/', include('froala_editor.urls')),
 
-Skip this url inclusion if you don't want image upload inside WYSIWYG editor. Images from URLs can still be embedded.
+Skip this url inclusion if you don't want image and file upload inside WYSIWYG editor. Images from URLs can still be embedded.
 
 Usage
 ==============
@@ -89,7 +89,7 @@ options
 Froala Editor provides several options for customizing the editor. See https://froala.com/wysiwyg-editor/docs for all available options.
 You can provide a dictionary of these options as ``FROALA_EDITOR_OPTIONS`` setting in ``settings.py``. These options would then be used for all instances of the WYSIWYG editor in the project.
 
-Options for individual field can also be provided via ``FroalaField`` or ``FroalEditor`` class. This overrides any options set via ``FROALA_EDITOR_OPTIONS``.:
+Options for individual field can also be provided via ``FroalaField`` or ``FroalaEditor`` class. This overrides any options set via ``FROALA_EDITOR_OPTIONS``.:
 
 .. code-block:: python
 
@@ -138,10 +138,10 @@ Froala Editor comes with the plugins: block style, text & background colors, fon
 
 .. code-block:: python
 
-    FROALA_EDITOR_PLUGINS = ('align', 'char_counter', 'code_beautifier' ,'code_view', 'colors', 'emoticons', 'entities', 'file',
-            'font_family', 'font_size', 'fullscreen', 'image_manager', 'image', 'inline_style',
-            'line_breaker', 'link', 'lists', 'paragraph_format', 'paragraph_style', 'quote',
-            'save', 'table', 'url', 'video')
+    FROALA_EDITOR_PLUGINS = ('align', 'char_counter', 'code_beautifier' ,'code_view', 'colors', 'emoticons',
+            'entities', 'file', 'font_family', 'font_size', 'fullscreen', 'image_manager', 'image', 'inline_style',
+            'line_breaker', 'link', 'lists', 'paragraph_format', 'paragraph_style', 'quote', 'save', 'table',
+            'url', 'video')
 
 The usage of ``plugins`` argument with ``FroalaEditor`` or ``FroalaField`` overrides this for that particular instance.
 
