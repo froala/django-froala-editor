@@ -10,10 +10,10 @@ class FroalaField(Field):
         self.options = kwargs.pop('options', {})
         self.theme = kwargs.pop('theme', getattr(settings, 'FROALA_EDITOR_THEME', None))
         self.plugins = kwargs.pop('plugins', getattr(settings, 'FROALA_EDITOR_PLUGINS', (
-                                  'align', 'char_counter', 'code_view', 'colors', 'emoticons', 'entities', 'file',
-                                  'font_family', 'font_size', 'fullscreen', 'image_manager', 'image', 'inline_style',
-                                  'line_breaker', 'link', 'lists', 'paragraph_format', 'paragraph_style', 'quote',
-                                  'save', 'table', 'url', 'video'
+                                  'align', 'char_counter', 'code_beautifier', 'code_view', 'colors', 'emoticons',
+                                  'entities', 'file', 'font_family', 'font_size', 'fullscreen', 'image_manager',
+                                  'image', 'inline_style','line_breaker', 'link', 'lists', 'paragraph_format',
+                                  'paragraph_style', 'quote', 'save', 'table', 'url', 'video'
                                   )))
         self.include_jquery = kwargs.pop('include_jquery', getattr(settings, 'FROALA_INCLUDE_JQUERY', True))
         self.image_upload = kwargs.pop('image_upload', True)

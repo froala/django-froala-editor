@@ -7,3 +7,4 @@ v1.2.3.1, Nov 12, 2014 -- Added csrf protection for image uploads
 v1.2.4.1, Jan 11, 2015 -- Fixed possible path traversal attack
 v1.2.4.2, Jan 14, 2015 -- Used default_storage for saving images
 v1.2.4.2, Jan 17, 2015 -- Minor performance fix
+v2.0.1, Nov 17, 2015 -- Update to V2.0.1

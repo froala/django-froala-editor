@@ -2,9 +2,8 @@ from setuptools import setup
 
 setup(
     name='django-froala-editor',
-    version='2.0.0-rc.3',
-    author='Dipesh Acharya',
-    author_email='xtranophilist@gmail.com',
+    version='2.0.1',
+    author='Dipesh Acharya <xtranophilist@gmail.com>, Stefan Neculai <stefan@froala.com>',
     packages=['froala_editor'],
     url='http://github.com/froala/django-froala-editor/',
     license='BSD License',

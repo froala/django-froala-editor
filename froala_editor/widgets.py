@@ -9,8 +9,8 @@ class FroalaEditor(widgets.Textarea):
     def __init__(self, *args, **kwargs):
         self.options = kwargs.pop('options', {})
         self.plugins = kwargs.pop('plugins', getattr(settings, 'FROALA_EDITOR_PLUGINS', (
-            'align', 'char_counter', 'code_view', 'colors', 'emoticons', 'entities', 'file',
-            'font_family', 'font_size', 'fullscreen', 'image_manager', 'image', 'inline_style',
+            'align', 'char_counter', 'code_beautifier', 'code_view', 'colors', 'emoticons', 'entities',
+            'file', 'font_family', 'font_size', 'fullscreen', 'image_manager', 'image', 'inline_style',
             'line_breaker', 'link', 'lists', 'paragraph_format', 'paragraph_style', 'quote',
             'save', 'table', 'url', 'video'
         )))
@@ -65,8 +65,9 @@ class FroalaEditor(widgets.Textarea):
 
     def _media(self):
         css = {
-            'all': ('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css', 'froala_editor/css/froala_editor.min.css',
-                    'froala_editor/css/froala_style.min.css', 'froala_editor/css/froala-django.css')
+            'all': ('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css',
+                    'froala_editor/css/froala_editor.min.css', 'froala_editor/css/froala_style.min.css',
+                    'froala_editor/css/froala-django.css')
         }
         js = ('froala_editor/js/froala_editor.min.js','froala_editor/js/froala-django.js',)
 

@@ -2,7 +2,7 @@
 django-froala-editor
 ======================
 
-django-froala-editor package helps integrate `Froala WYSIWYG HTML editor <https://froala.com/wysiwyg-editor/v2.0/>`_ with Django.
+django-froala-editor package helps integrate `Froala WYSIWYG HTML editor <https://froala.com/wysiwyg-editor/>`_ with Django.
 
 
 Getting started
@@ -86,7 +86,7 @@ Customization
 options
 ^^^^^^^^^
 
-Froala Editor provides several options for customizing the editor. See https://froala.com/wysiwyg-editor/v2.0/docs for all available options.
+Froala Editor provides several options for customizing the editor. See https://froala.com/wysiwyg-editor/docs for all available options.
 You can provide a dictionary of these options as ``FROALA_EDITOR_OPTIONS`` setting in ``settings.py``. These options would then be used for all instances of the WYSIWYG editor in the project.
 
 Options for individual field can also be provided via ``FroalaField`` or ``FroalEditor`` class. This overrides any options set via ``FROALA_EDITOR_OPTIONS``.:
@@ -132,13 +132,13 @@ You may provide the name of the theme to be used as ``theme`` argument to ``Froa
 
 plugins
 ^^^^^^^^^^
-Froala Editor comes with the plugins: block style, text & background colors, font size, font family, insert video, insert table, media manager, lists and file upload. By default, all plugins are enabled by default in this package. See `https://froala.com/wysiwyg-editor/v2.0/docs/plugins <https://froala.com/wysiwyg-editor/v2.0/docs/plugins>`_ for all available plugins.
+Froala Editor comes with the plugins: block style, text & background colors, font size, font family, insert video, insert table, media manager, lists and file upload. By default, all plugins are enabled by default in this package. See `https://froala.com/wysiwyg-editor/docs/plugins <https://froala.com/wysiwyg-editor/docs/plugins>`_ for all available plugins.
 
 ``FROALA_EDITOR_PLUGINS`` can be set in ``settings.py`` to tell which plugins should all instances of Froala Editor be using. By default, it is
 
 .. code-block:: python
 
-    FROALA_EDITOR_PLUGINS = ('align', 'char_counter', 'code_view', 'colors', 'emoticons', 'entities', 'file',
+    FROALA_EDITOR_PLUGINS = ('align', 'char_counter', 'code_beautifier' ,'code_view', 'colors', 'emoticons', 'entities', 'file',
             'font_family', 'font_size', 'fullscreen', 'image_manager', 'image', 'inline_style',
             'line_breaker', 'link', 'lists', 'paragraph_format', 'paragraph_style', 'quote',
             'save', 'table', 'url', 'video')
@@ -169,5 +169,6 @@ jQuery is included by default in form media. If you don't want to include jQuery
 License
 ===============
 
-This package is available under BSD License.
-See https://froala.com/wysiwyg-editor/v2.0/pricing for licensing the Froala Editor.
+This package is available under BSD License. However, in order to use Froala WYSIWYG HTML Editor plugin you should purchase a license for it.
+
+See https://froala.com/wysiwyg-editor/pricing for licensing the Froala Editor.
