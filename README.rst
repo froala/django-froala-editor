@@ -69,7 +69,7 @@ In case of jQuery conflict (when your project template already has jQuery), you 
     <script type="text/javascript" src="{{STATIC_URL}}froala_editor/js/froala_editor.min.js"></script>
 
 
-Or simply ,you may use the following in your `settings.py` if you don't want Froala to include jQuery by itself thus preventing any conflicts:
+Or simply, you may use the following in your `settings.py` if you don't want Froala to include jQuery by itself, thus preventing any conflicts:
 
 .. code-block:: python
 
