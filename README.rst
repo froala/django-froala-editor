@@ -172,3 +172,14 @@ License
 This package is available under BSD License. However, in order to use Froala WYSIWYG HTML Editor plugin you should purchase a license for it.
 
 See https://froala.com/wysiwyg-editor/pricing for licensing the Froala Editor.
+
+If you bought a license and got your key, the easiest way to implement it is to put it into the ``FROALA_EDITOR_OPTIONS`` setting in ``settings.py``:
+
+.. code-block:: python
+
+    FROALA_EDITOR_OPTIONS = {
+        'KEY': '<our key goes here>',
+        # other options
+        # ...
+    }
+
