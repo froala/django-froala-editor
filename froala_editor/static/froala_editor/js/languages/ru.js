@@ -1,5 +1,5 @@
 /*!
- * froala_editor v2.1.0 (https://www.froala.com/wysiwyg-editor)
+ * froala_editor v2.2.0 (https://www.froala.com/wysiwyg-editor)
  * License https://froala.com/wysiwyg-editor/terms
  * Copyright 2014-2016 Froala Labs
  */
@@ -8,7 +8,7 @@
  * Russian
  */
 
-$.FroalaEditor.LANGUAGE['ru'] = {
+$.FE.LANGUAGE['ru'] = {
   translation: {
     // Place holder
     "Type something": "\u041d\u0430\u043f\u0438\u0448\u0438\u0442\u0435 \u0447\u0442\u043e\u002d\u043d\u0438\u0431\u0443\u0434\u044c",
@@ -221,7 +221,10 @@ $.FroalaEditor.LANGUAGE['ru'] = {
     // Quote
     "Quote": "\u0446\u0438\u0442\u0430\u0442\u0430",
     "Increase": "\u0423\u0432\u0435\u043b\u0438\u0447\u0435\u043d\u0438\u0435",
-    "Decrease": "\u0421\u043d\u0438\u0436\u0435\u043d\u0438\u0435"
+    "Decrease": "\u0421\u043d\u0438\u0436\u0435\u043d\u0438\u0435",
+
+    // Quick Insert
+    "Quick Insert": "\u0411\u044b\u0441\u0442\u0440\u044b\u0439 \u0432\u0441\u0442\u0430\u0432\u043a\u0430"
   },
   direction: "ltr"
 };

@@ -1,5 +1,5 @@
 /*!
- * froala_editor v2.1.0 (https://www.froala.com/wysiwyg-editor)
+ * froala_editor v2.2.0 (https://www.froala.com/wysiwyg-editor)
  * License https://froala.com/wysiwyg-editor/terms
  * Copyright 2014-2016 Froala Labs
  */
@@ -8,7 +8,7 @@
  * Indonesian
  */
 
-$.FroalaEditor.LANGUAGE['id'] = {
+$.FE.LANGUAGE['id'] = {
   translation: {
     // Place holder
     "Type something": "Ketik sesuatu",
@@ -221,7 +221,10 @@ $.FroalaEditor.LANGUAGE['id'] = {
     // Quote
     "Quote": "Kutipan",
     "Increase": "Meningkat",
-    "Decrease": "Penurunan"
+    "Decrease": "Penurunan",
+
+    // Quick Insert
+    "Quick Insert": "Memasukkan cepat"
   },
   direction: "ltr"
 };

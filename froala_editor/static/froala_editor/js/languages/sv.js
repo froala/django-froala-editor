@@ -1,5 +1,5 @@
 /*!
- * froala_editor v2.1.0 (https://www.froala.com/wysiwyg-editor)
+ * froala_editor v2.2.0 (https://www.froala.com/wysiwyg-editor)
  * License https://froala.com/wysiwyg-editor/terms
  * Copyright 2014-2016 Froala Labs
  */
@@ -8,7 +8,7 @@
  * Swedish
  */
 
-$.FroalaEditor.LANGUAGE['sv'] = {
+$.FE.LANGUAGE['sv'] = {
   translation: {
     // Place holder
     "Type something": "Ange n\u00e5got",
@@ -221,7 +221,10 @@ $.FroalaEditor.LANGUAGE['sv'] = {
     // Quote
     "Quote": "Citerar",
     "Increase": "\u00d6ka",
-    "Decrease": "Minska"
+    "Decrease": "Minska",
+
+    // Quick Insert
+    "Quick Insert": "Snabb insats"
   },
   direction: "ltr"
 };

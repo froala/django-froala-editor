@@ -1,5 +1,5 @@
 /*!
- * froala_editor v2.1.0 (https://www.froala.com/wysiwyg-editor)
+ * froala_editor v2.2.0 (https://www.froala.com/wysiwyg-editor)
  * License https://froala.com/wysiwyg-editor/terms
  * Copyright 2014-2016 Froala Labs
  */
@@ -8,7 +8,7 @@
  * Estonian
  */
 
-$.FroalaEditor.LANGUAGE['et'] = {
+$.FE.LANGUAGE['et'] = {
   translation: {
     // Place holder
     "Type something": "Kirjuta midagi",
@@ -221,7 +221,10 @@ $.FroalaEditor.LANGUAGE['et'] = {
     // Quote
     "Quote": "Tsitaat",
     "Increase": "Suurendama",
-    "Decrease": "V\u00e4henda"
+    "Decrease": "V\u00e4henda",
+
+    // Quick Insert
+    "Quick Insert": "Kiire sisestada"
   },
   direction: "ltr"
 };

@@ -1,5 +1,5 @@
 /*!
- * froala_editor v2.1.0 (https://www.froala.com/wysiwyg-editor)
+ * froala_editor v2.2.0 (https://www.froala.com/wysiwyg-editor)
  * License https://froala.com/wysiwyg-editor/terms
  * Copyright 2014-2016 Froala Labs
  */
@@ -8,7 +8,7 @@
  * Serbian (Latin)
  */
 
-$.FroalaEditor.LANGUAGE['sr'] = {
+$.FE.LANGUAGE['sr'] = {
   translation: {
     // Place holder
     "Type something": "Ukucajte ne\u0161tp",
@@ -221,7 +221,10 @@ $.FroalaEditor.LANGUAGE['sr'] = {
     // Quote
     "Quote": "Ponude",
     "Increase": "Pove\u0107anje",
-    "Decrease": "Smanjivanje"
+    "Decrease": "Smanjivanje",
+
+    // Quick Insert
+    "Quick Insert": "Brzo umetanje"
   },
   direction: "ltr"
 };

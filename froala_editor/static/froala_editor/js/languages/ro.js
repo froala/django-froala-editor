@@ -1,5 +1,5 @@
 /*!
- * froala_editor v2.1.0 (https://www.froala.com/wysiwyg-editor)
+ * froala_editor v2.2.0 (https://www.froala.com/wysiwyg-editor)
  * License https://froala.com/wysiwyg-editor/terms
  * Copyright 2014-2016 Froala Labs
  */
@@ -8,7 +8,7 @@
  * Romanian
  */
 
-$.FroalaEditor.LANGUAGE['ro'] = {
+$.FE.LANGUAGE['ro'] = {
   translation: {
     // Place holder
     "Type something": "Tasteaz\u0103 ceva",
@@ -222,7 +222,10 @@ $.FroalaEditor.LANGUAGE['ro'] = {
     // Quote
     "Quote": "Citat",
     "Increase": "Indenteaz\u0103",
-    "Decrease": "De-indenteaz\u0103"
+    "Decrease": "De-indenteaz\u0103",
+
+    // Quick Insert
+    "Quick Insert": "Inserare rapid\u0103"
   },
   direction: "ltr"
 };

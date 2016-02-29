@@ -1,5 +1,5 @@
 /*!
- * froala_editor v2.1.0 (https://www.froala.com/wysiwyg-editor)
+ * froala_editor v2.2.0 (https://www.froala.com/wysiwyg-editor)
  * License https://froala.com/wysiwyg-editor/terms
  * Copyright 2014-2016 Froala Labs
  */
@@ -8,7 +8,7 @@
  * Hungarian
  */
 
-$.FroalaEditor.LANGUAGE['hu'] = {
+$.FE.LANGUAGE['hu'] = {
   translation: {
     // Place holder
     "Type something": "T\u00edpus valami",
@@ -221,7 +221,10 @@ $.FroalaEditor.LANGUAGE['hu'] = {
     // Quote
     "Quote": "Id\u00e9zet",
     "Increase": "N\u00f6veked\u00e9s",
-    "Decrease": "Cs\u00f6kkent"
+    "Decrease": "Cs\u00f6kkent",
+
+    // Quick Insert
+    "Quick Insert": "Gyors bet\u00e9t"
   },
   direction: "ltr"
 };

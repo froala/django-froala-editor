@@ -1,5 +1,5 @@
 /*!
- * froala_editor v2.1.0 (https://www.froala.com/wysiwyg-editor)
+ * froala_editor v2.2.0 (https://www.froala.com/wysiwyg-editor)
  * License https://froala.com/wysiwyg-editor/terms
  * Copyright 2014-2016 Froala Labs
  */
@@ -8,7 +8,7 @@
  * Czech
  */
 
-$.FroalaEditor.LANGUAGE['cs'] = {
+$.FE.LANGUAGE['cs'] = {
   translation: {
     // Place holder
     "Type something": "Napi\u0161te n\u011bco",
@@ -221,7 +221,10 @@ $.FroalaEditor.LANGUAGE['cs'] = {
     // Quote
     "Quote": "Cit\u00e1t",
     "Increase": "Nav\u00fd\u0161it",
-    "Decrease": "Sn\u00ed\u017een\u00ed"
+    "Decrease": "Sn\u00ed\u017een\u00ed",
+
+    // Quick Insert
+    "Quick Insert": "Rychl\u00e1 vlo\u017eka"
   },
   direction: "ltr"
 };

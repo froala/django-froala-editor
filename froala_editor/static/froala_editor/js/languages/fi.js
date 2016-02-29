@@ -1,5 +1,5 @@
 /*!
- * froala_editor v2.1.0 (https://www.froala.com/wysiwyg-editor)
+ * froala_editor v2.2.0 (https://www.froala.com/wysiwyg-editor)
  * License https://froala.com/wysiwyg-editor/terms
  * Copyright 2014-2016 Froala Labs
  */
@@ -8,7 +8,7 @@
  * Finnish
  */
 
-$.FroalaEditor.LANGUAGE['fi'] = {
+$.FE.LANGUAGE['fi'] = {
   translation: {
     // Place holder
     "Type something": "Kirjoita jotain",
@@ -221,7 +221,10 @@ $.FroalaEditor.LANGUAGE['fi'] = {
     // Quote
     "Quote": "Lainaus",
     "Increase": "Lis\u00e4t\u00e4",
-    "Decrease": "Pienenn\u00e4"
+    "Decrease": "Pienenn\u00e4",
+
+    // Quick Insert
+    "Quick Insert": "Nopea insertti"
   },
   direction: "ltr"
 };

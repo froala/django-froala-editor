@@ -1,5 +1,5 @@
 /*!
- * froala_editor v2.1.0 (https://www.froala.com/wysiwyg-editor)
+ * froala_editor v2.2.0 (https://www.froala.com/wysiwyg-editor)
  * License https://froala.com/wysiwyg-editor/terms
  * Copyright 2014-2016 Froala Labs
  */
@@ -8,7 +8,7 @@
  * Portuguese spoken in Portugal
  */
 
-$.FroalaEditor.LANGUAGE['pt_pt'] = {
+$.FE.LANGUAGE['pt_pt'] = {
   translation: {
     // Place holder
     "Type something": "Digite algo",
@@ -221,7 +221,10 @@ $.FroalaEditor.LANGUAGE['pt_pt'] = {
     // Quote
     "Quote": "Cita\u00e7\u00e3o",
     "Increase": "Aumentar",
-    "Decrease": "Diminuir"
+    "Decrease": "Diminuir",
+
+    // Quick Insert
+    "Quick Insert": "Inser\u00e7\u00e3o r\u00e1pida"
   },
   direction: "ltr"
 };

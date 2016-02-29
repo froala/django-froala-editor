@@ -1,5 +1,5 @@
 /*!
- * froala_editor v2.1.0 (https://www.froala.com/wysiwyg-editor)
+ * froala_editor v2.2.0 (https://www.froala.com/wysiwyg-editor)
  * License https://froala.com/wysiwyg-editor/terms
  * Copyright 2014-2016 Froala Labs
  */
@@ -8,7 +8,7 @@
  * Turkish
  */
 
-$.FroalaEditor.LANGUAGE['tr'] = {
+$.FE.LANGUAGE['tr'] = {
   translation: {
     // Place holder
     "Type something": "Bir \u015fey yaz\u0131n",
@@ -221,7 +221,10 @@ $.FroalaEditor.LANGUAGE['tr'] = {
     // Quote
     "Quote": "Al\u0131nt\u0131",
     "Increase": "Art\u0131rmak",
-    "Decrease": "Azal\u0131\u015f"
+    "Decrease": "Azal\u0131\u015f",
+
+    // Quick Insert
+    "Quick Insert": "H\u0131zl\u0131 insert"
   },
   direction: "ltr"
 };
