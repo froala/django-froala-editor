@@ -178,7 +178,7 @@ If you bought a license and got your key, the easiest way to implement it is to 
 .. code-block:: python
 
     FROALA_EDITOR_OPTIONS = {
-        'KEY': '<our key goes here>',
+        'key': '<our key goes here>',
         # other options
         # ...
     }
