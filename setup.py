@@ -11,7 +11,7 @@ setup(
     url='http://github.com/froala/django-froala-editor/',
     license='BSD License',
     description='django-froala-editor package helps integrate Froala WYSIWYG HTML editor with Django.',
-    long_description=open('README.rst').read(),
+    long_description=open('README.md').read(),
     include_package_data=True,
     zip_safe=False,
     keywords='froala,django,admin,wysiwyg,editor,text,html,editor,rich, web',
