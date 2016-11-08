@@ -8,6 +8,10 @@
 
   `pip install django-froala-editor`
 
+  if not update in pypi use this
+  
+  `pip install https://github.com/froala/django-froala-editor/archive/master.zip`
+
 OR
 
 Add the directory `froala_editor` from this repo to your Python path.
