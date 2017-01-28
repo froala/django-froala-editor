@@ -1,5 +1,14 @@
 from setuptools import setup
 
+README = os.path.join(os.path.dirname(__file__), 'README.rst')
+
+try:
+    with open(README) as file:
+        long_description = file.read()
+except Exception:
+    long_description = ''
+
+
 setup(
     name='django-froala-editor',
     version='2.4.1',
@@ -11,7 +20,7 @@ setup(
     url='http://github.com/froala/django-froala-editor/',
     license='BSD License',
     description='django-froala-editor package helps integrate Froala WYSIWYG HTML editor with Django.',
-    long_description=open('README.md').read(),
+    long_description=long_description,
     include_package_data=True,
     zip_safe=False,
     keywords='froala,django,admin,wysiwyg,editor,text,html,editor,rich, web',
