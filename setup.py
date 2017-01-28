@@ -1,4 +1,5 @@
 from setuptools import setup
+import os
 
 README = os.path.join(os.path.dirname(__file__), 'README.rst')
 
