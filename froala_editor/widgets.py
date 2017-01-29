@@ -89,7 +89,7 @@ class FroalaEditor(widgets.Textarea):
             js = ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js',) + js
 
         if self.theme:
-            css['all'] += ('froala_editor/css/themes/' + self.theme + '.css',)
+            css['all'] += ('froala_editor/css/themes/' + self.theme + '.min.css',)
 
         if self.language:
             js += ('froala_editor/js/languages/' + self.language + '.js',)
