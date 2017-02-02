@@ -1,4 +1,4 @@
 include *.txt
-include README.rst
+include README.md
 recursive-include docs *.txt
 recursive-include froala_editor/static *
