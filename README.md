@@ -51,22 +51,22 @@ class PageForm(forms.ModelForm):
 When used outside the Django admin, the media files are to be manually included in the template. Inside the ``<head>`` section or before the form is rendered, include:
 
 ```python
-  {{ form.media }}
+{{ form.media }}
 ```
 
 In case of jQuery conflict (when your project template already has jQuery), you need to include the following files instead of `{{ form.media }}` plus the static files for theme (if not default) and required plugins.
 
 ```python
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" type="text/css" media="all" rel="stylesheet" />
-  <link href="{{STATIC_URL}}froala_editor/css/froala_editor.min.css" type="text/css" media="all" rel="stylesheet" />
-  <link href="{{STATIC_URL}}froala_editor/css/froala_style.min.css" type="text/css" media="all" rel="stylesheet" />
-  <script type="text/javascript" src="{{STATIC_URL}}froala_editor/js/froala_editor.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" type="text/css" media="all" rel="stylesheet" />
+<link href="{{STATIC_URL}}froala_editor/css/froala_editor.min.css" type="text/css" media="all" rel="stylesheet" />
+<link href="{{STATIC_URL}}froala_editor/css/froala_style.min.css" type="text/css" media="all" rel="stylesheet" />
+<script type="text/javascript" src="{{STATIC_URL}}froala_editor/js/froala_editor.min.js"></script>
 ```
 
 Or simply, you may use the following in your `settings.py` if you don't want Froala to include jQuery by itself, thus preventing any conflicts:
 
 ```python
-  FROALA_INCLUDE_JQUERY = False
+FROALA_INCLUDE_JQUERY = False
 ```
 
 ### Options
