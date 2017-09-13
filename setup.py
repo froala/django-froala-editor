@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='django-froala-editor',
-    version='2.6.5',
+    version='2.6.6',
     author='Dipesh Acharya',
     author_email='xtranophilist@gmail.com',
     maintainer='Froala Labs',
