@@ -2,9 +2,17 @@ import json
 # from django.http import JsonResponse
 from django.http import HttpResponse
 from django.conf import settings
-from django.core.files.storage import default_storage
 import os
 from django.utils.translation import ugettext_lazy as _
+from django.utils.module_loading import import_string
+
+
+# Allow for a custom storage backend defined in settings.
+def get_storage_class():
+    return import_string(getattr(settings, 'FROALA_STORAGE_BACKEND', 'django.core.files.storage.DefaultStorage'))()
+
+
+storage = get_storage_class()
 
 
 def image_upload(request):
@@ -18,8 +26,8 @@ def image_upload(request):
         # filesize = len(file['content'])
         # filetype = file['content-type']
         upload_to = getattr(settings, 'FROALA_UPLOAD_PATH', 'uploads/froala_editor/images/')
-        path = default_storage.save(os.path.join(upload_to, the_file.name), the_file)
-        link = default_storage.url(path)
+        path = storage.save(os.path.join(upload_to, the_file.name), the_file)
+        link = storage.url(path)
         # return JsonResponse({'link': link})
         return HttpResponse(json.dumps({'link': link}), content_type="application/json")
 
@@ -28,6 +36,6 @@ def file_upload(request):
     if 'file' in request.FILES:
         the_file = request.FILES['file']
         upload_to = getattr(settings, 'FROALA_UPLOAD_PATH', 'uploads/froala_editor/files/')
-        path = default_storage.save(os.path.join(upload_to, the_file.name), the_file)
-        link = default_storage.url(path)
+        path = storage.save(os.path.join(upload_to, the_file.name), the_file)
+        link = storage.url(path)
         return HttpResponse(json.dumps({'link': link}), content_type="application/json")
