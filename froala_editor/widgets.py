@@ -3,7 +3,7 @@ from django.forms import widgets, Media
 from django.utils.safestring import mark_safe
 from django.conf import settings
 import json
-from . import PLUGINS, PLUGINS_WITH_CSS
+from . import PLUGINS, PLUGINS_WITH_CSS, THIRD_PARTY
 
 
 class FroalaEditor(widgets.Textarea):
@@ -47,7 +47,10 @@ class FroalaEditor(widgets.Textarea):
             options['theme'] = self.theme
 
         json_options = json.dumps(options)
-        json_options = json_options.replace('"csrftokenplaceholder"', 'getCookie("csrftoken")')
+        if(getattr(settings, 'FROALA_JS_COOKIE', False)):
+            json_options = json_options.replace('"csrftokenplaceholder"', 'Cookies.get("csrftoken")')
+        else:
+            json_options = json_options.replace('"csrftokenplaceholder"', 'getCookie("csrftoken")')
         return json_options
 
     def render(self, name, value, attrs=None):
@@ -70,9 +73,9 @@ class FroalaEditor(widgets.Textarea):
         css = {
             'all': ('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css',
                     'froala_editor/css/froala_editor.min.css', 'froala_editor/css/froala_style.min.css',
-                    'froala_editor/css/froala-django.css')
+                    )
         }
-        js = ('froala_editor/js/froala_editor.min.js', 'froala_editor/js/froala-django.js',)
+        js = ('froala_editor/js/froala_editor.min.js',)
 
         if self.include_jquery:
             js = ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js',) + js
@@ -84,9 +87,11 @@ class FroalaEditor(widgets.Textarea):
             js += ('froala_editor/js/languages/' + self.language + '.js',)
 
         for plugin in self.plugins:
-            js += ('froala_editor/js/plugins/' + plugin + '.min.js',)
+            base_path = 'froala_editor/{file_type}/{directory}/{plugin}.min.{file_type}'
+            directory = 'third_party' if plugin in THIRD_PARTY else 'plugins'
+            js += (base_path.format(file_type='js', directory=directory, plugin=plugin),)
             if plugin in PLUGINS_WITH_CSS:
-                css['all'] += ('froala_editor/css/plugins/' + plugin + '.min.css',)
+                css['all'] += (base_path.format(file_type='css', directory=directory, plugin=plugin),)
 
         return Media(css=css, js=js)
 
