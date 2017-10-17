@@ -1,9 +1,13 @@
-from django.core.urlresolvers import reverse, NoReverseMatch
 from django.forms import widgets, Media
 from django.utils.safestring import mark_safe
 from django.conf import settings
 import json
 from . import PLUGINS, PLUGINS_WITH_CSS
+
+try:
+    from django.urls import NoReverseMatch, reverse
+except ImportError:
+    from django.core.urlresolvers import reverse, NoReverseMatch
 
 
 class FroalaEditor(widgets.Textarea):
