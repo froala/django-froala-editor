@@ -826,6 +826,9 @@ body.prevent-scroll.fr-mobile {
   border-bottom: solid 2px #1e88e5;
   margin-bottom: 0px;
 }
+.fr-input-line label:after{
+  display: none;
+}
 .fr-popup .fr-input-line input + label,
 .fr-popup .fr-input-line textarea + label {
   position: absolute;
@@ -1027,6 +1030,8 @@ body.prevent-scroll.fr-mobile {
   cursor: pointer;
   margin: 0 5px;
   vertical-align: middle;
+  display: inline-block;
+  float: none;
 }
 .fr-popup.fr-rtl {
   direction: rtl;
