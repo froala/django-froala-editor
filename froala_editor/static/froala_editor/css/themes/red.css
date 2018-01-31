@@ -1,7 +1,7 @@
 /*!
- * froala_editor v2.7.1 (https://www.froala.com/wysiwyg-editor)
+ * froala_editor v2.7.4 (https://www.froala.com/wysiwyg-editor)
  * License https://froala.com/wysiwyg-editor/terms/
- * Copyright 2014-2017 Froala Labs
+ * Copyright 2014-2018 Froala Labs
  */
 
 .clearfix::after {
@@ -53,7 +53,8 @@
   -o-transition: transform 0.2s ease 0s;
   fill: #ffca28;
 }
-.red-theme.fr-box a.fr-floating-btn i {
+.red-theme.fr-box a.fr-floating-btn i,
+.red-theme.fr-box a.fr-floating-btn svg {
   font-size: 14px;
   line-height: 32px;
 }
@@ -198,6 +199,12 @@
 }
 .red-theme.fr-popup .fr-color-hex-layer .fr-action-buttons button {
   background-color: #ffca28;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
 }
 .red-theme.fr-popup .fr-color-hex-layer .fr-action-buttons button:hover {
   background-color: #f4b800;
@@ -205,7 +212,8 @@
 .red-theme.fr-popup .fr-color-set {
   line-height: 0;
 }
-.red-theme.fr-popup .fr-color-set > span > i {
+.red-theme.fr-popup .fr-color-set > span > i,
+.red-theme.fr-popup .fr-color-set > span > svg {
   bottom: 0;
   left: 0;
 }
@@ -229,38 +237,38 @@
   outline: 0;
   background: #c65a59;
 }
-.red-theme .fr-file-upload-layer {
+.red-theme.fr-popup .fr-file-upload-layer {
   border: dashed 2px #edc9c9;
   padding: 25px 0;
 }
-.red-theme .fr-file-upload-layer:hover {
+.red-theme.fr-popup .fr-file-upload-layer:hover {
   background: #c65a59;
 }
-.red-theme .fr-file-upload-layer.fr-drop {
+.red-theme.fr-popup .fr-file-upload-layer.fr-drop {
   background: #c65a59;
   border-color: #ffca28;
 }
-.red-theme .fr-file-upload-layer .fr-form {
+.red-theme.fr-popup .fr-file-upload-layer .fr-form {
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   z-index: 2147483640;
 }
-.red-theme .fr-file-progress-bar-layer > h3 {
+.red-theme.fr-popup .fr-file-progress-bar-layer > h3 {
   margin: 10px 0;
 }
-.red-theme .fr-file-progress-bar-layer > div.fr-loader {
+.red-theme.fr-popup .fr-file-progress-bar-layer > div.fr-loader {
   background: #ffefbf;
 }
-.red-theme .fr-file-progress-bar-layer > div.fr-loader span {
+.red-theme.fr-popup .fr-file-progress-bar-layer > div.fr-loader span {
   background: #ffca28;
   -webkit-transition: width 0.2s ease 0s;
   -moz-transition: width 0.2s ease 0s;
   -ms-transition: width 0.2s ease 0s;
   -o-transition: width 0.2s ease 0s;
 }
-.red-theme .fr-file-progress-bar-layer > div.fr-loader.fr-indeterminate span {
+.red-theme.fr-popup .fr-file-progress-bar-layer > div.fr-loader.fr-indeterminate span {
   top: 0;
 }
 .red-theme.fr-box.fr-fullscreen {
@@ -334,38 +342,38 @@
   right: 0;
   z-index: 2147483640;
 }
-.red-theme .fr-image-upload-layer {
+.red-theme.fr-popup .fr-image-upload-layer {
   border: dashed 2px #edc9c9;
   padding: 25px 0;
 }
-.red-theme .fr-image-upload-layer:hover {
+.red-theme.fr-popup .fr-image-upload-layer:hover {
   background: #c65a59;
 }
-.red-theme .fr-image-upload-layer.fr-drop {
+.red-theme.fr-popup .fr-image-upload-layer.fr-drop {
   background: #c65a59;
   border-color: #ffca28;
 }
-.red-theme .fr-image-upload-layer .fr-form {
+.red-theme.fr-popup .fr-image-upload-layer .fr-form {
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   z-index: 2147483640;
 }
-.red-theme .fr-image-progress-bar-layer > h3 {
+.red-theme.fr-popup .fr-image-progress-bar-layer > h3 {
   margin: 10px 0;
 }
-.red-theme .fr-image-progress-bar-layer > div.fr-loader {
+.red-theme.fr-popup .fr-image-progress-bar-layer > div.fr-loader {
   background: #ffefbf;
 }
-.red-theme .fr-image-progress-bar-layer > div.fr-loader span {
+.red-theme.fr-popup .fr-image-progress-bar-layer > div.fr-loader span {
   background: #ffca28;
   -webkit-transition: width 0.2s ease 0s;
   -moz-transition: width 0.2s ease 0s;
   -ms-transition: width 0.2s ease 0s;
   -o-transition: width 0.2s ease 0s;
 }
-.red-theme .fr-image-progress-bar-layer > div.fr-loader.fr-indeterminate span {
+.red-theme.fr-popup .fr-image-progress-bar-layer > div.fr-loader.fr-indeterminate span {
   top: 0;
 }
 .red-theme.fr-modal-head .fr-modal-head-line i.fr-modal-more {
@@ -508,6 +516,12 @@
 }
 .red-theme.fr-popup .fr-table-colors-hex-layer .fr-action-buttons button {
   background-color: #ffca28;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
 }
 .red-theme.fr-popup .fr-table-colors-hex-layer .fr-action-buttons button:hover {
   background-color: #f4b800;
@@ -590,38 +604,38 @@
     bottom: -5px;
   }
 }
-.red-theme .fr-video-upload-layer {
+.red-theme.fr-popup .fr-video-upload-layer {
   border: dashed 2px #edc9c9;
   padding: 25px 0;
 }
-.red-theme .fr-video-upload-layer:hover {
+.red-theme.fr-popup .fr-video-upload-layer:hover {
   background: #c65a59;
 }
-.red-theme .fr-video-upload-layer.fr-drop {
+.red-theme.fr-popup .fr-video-upload-layer.fr-drop {
   background: #c65a59;
   border-color: #ffca28;
 }
-.red-theme .fr-video-upload-layer .fr-form {
+.red-theme.fr-popup .fr-video-upload-layer .fr-form {
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   z-index: 2147483640;
 }
-.red-theme .fr-video-progress-bar-layer > h3 {
+.red-theme.fr-popup .fr-video-progress-bar-layer > h3 {
   margin: 10px 0;
 }
-.red-theme .fr-video-progress-bar-layer > div.fr-loader {
+.red-theme.fr-popup .fr-video-progress-bar-layer > div.fr-loader {
   background: #ffefbf;
 }
-.red-theme .fr-video-progress-bar-layer > div.fr-loader span {
+.red-theme.fr-popup .fr-video-progress-bar-layer > div.fr-loader span {
   background: #ffca28;
   -webkit-transition: width 0.2s ease 0s;
   -moz-transition: width 0.2s ease 0s;
   -ms-transition: width 0.2s ease 0s;
   -o-transition: width 0.2s ease 0s;
 }
-.red-theme .fr-video-progress-bar-layer > div.fr-loader.fr-indeterminate span {
+.red-theme.fr-popup .fr-video-progress-bar-layer > div.fr-loader.fr-indeterminate span {
   top: 0;
 }
 .red-theme.fr-video-overlay {
@@ -763,7 +777,9 @@
   width: auto;
 }
 .red-theme.fr-toolbar .fr-command.fr-btn i,
-.red-theme.fr-popup .fr-command.fr-btn i {
+.red-theme.fr-popup .fr-command.fr-btn i,
+.red-theme.fr-toolbar .fr-command.fr-btn svg,
+.red-theme.fr-popup .fr-command.fr-btn svg {
   font-size: 14px;
   width: 14px;
   margin: 12px 12px;
@@ -795,7 +811,9 @@
 .red-theme.fr-toolbar .fr-command.fr-btn.fr-dropdown span,
 .red-theme.fr-popup .fr-command.fr-btn.fr-dropdown span,
 .red-theme.fr-toolbar .fr-command.fr-btn.fr-dropdown img,
-.red-theme.fr-popup .fr-command.fr-btn.fr-dropdown img {
+.red-theme.fr-popup .fr-command.fr-btn.fr-dropdown img,
+.red-theme.fr-toolbar .fr-command.fr-btn.fr-dropdown svg,
+.red-theme.fr-popup .fr-command.fr-btn.fr-dropdown svg {
   margin-left: 8px;
   margin-right: 16px;
 }
@@ -991,10 +1009,8 @@
   -ms-transition: height 0.2s ease 0s;
   -o-transition: height 0.2s ease 0s;
 }
-.red-theme.fr-modal .fr-modal-wrapper .fr-modal-head i {
+.red-theme.fr-modal .fr-modal-wrapper .fr-modal-head .fr-modal-close {
   color: #ffffff;
-}
-.red-theme.fr-modal .fr-modal-wrapper .fr-modal-head i.fr-modal-close {
   top: 0;
   right: 0;
   -webkit-transition: color 0.2s ease 0s;
@@ -1015,6 +1031,12 @@
   -moz-transition: background 0.2s ease 0s;
   -ms-transition: background 0.2s ease 0s;
   -o-transition: background 0.2s ease 0s;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
 }
 .red-theme.fr-modal .fr-modal-wrapper div.fr-modal-body button.fr-command:hover,
 .red-theme.fr-modal .fr-modal-wrapper div.fr-modal-body button.fr-command:focus {
@@ -1055,7 +1077,7 @@
   border-top: 5px solid #671b1a;
 }
 .red-theme.fr-popup .fr-input-focus {
-  background: #f5f5f5;
+  background: #bf4644;
 }
 .red-theme.fr-popup.fr-above {
   border-top: 0;
@@ -1117,6 +1139,12 @@
   -moz-transition: background 0.2s ease 0s;
   -ms-transition: background 0.2s ease 0s;
   -o-transition: background 0.2s ease 0s;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
 }
 .red-theme.fr-popup .fr-action-buttons button.fr-command:hover,
 .red-theme.fr-popup .fr-action-buttons button.fr-command:focus {

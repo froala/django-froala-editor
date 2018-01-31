@@ -1,7 +1,7 @@
 /*!
- * froala_editor v2.7.1 (https://www.froala.com/wysiwyg-editor)
+ * froala_editor v2.7.4 (https://www.froala.com/wysiwyg-editor)
  * License https://froala.com/wysiwyg-editor/terms/
- * Copyright 2014-2017 Froala Labs
+ * Copyright 2014-2018 Froala Labs
  */
 
 (function (factory) {
@@ -50,7 +50,7 @@ $.FE.LANGUAGE['pt_br'] = {
     "Delete": "Apagar",
     "Cancel": "Cancelar",
     "OK": "Ok",
-    "Back": "Costas",
+    "Back": "Voltar",
     "Remove": "Remover",
     "More": "Mais",
     "Update": "Atualizar",
@@ -132,11 +132,15 @@ $.FE.LANGUAGE['pt_br'] = {
     // Video
     "Insert Video": "Inserir v\u00eddeo",
     "Embedded Code": "C\u00f3digo embutido",
+    "Paste in a video URL": "Colar em um URL de vídeo",
+    "Drop video": "Solte o video",
+    "Your browser does not support HTML5 video.": "Seu navegador não suporta o vídeo html5.",
+    "Upload Video": "Envio vídeo",
 
     // Tables
     "Insert Table": "Inserir tabela",
     "Table Header": "Cabe\u00e7alho da tabela",
-    "Remove Table": "Remover mesa",
+    "Remove Table": "Remover tabela",
     "Table Style": "estilo de tabela",
     "Horizontal Align": "Alinhamento horizontal",
     "Row": "Linha",
@@ -290,7 +294,7 @@ $.FE.LANGUAGE['pt_br'] = {
     "Image / Video": "Imagem / video",
     "Resize larger": "Redimensionar maior",
     "Resize smaller": "Redimensionar menor",
-    "Table": "Mesa",
+    "Table": "Tabela",
     "Select table cell": "Selecione a célula da tabela",
     "Extend selection one cell": "Ampliar a seleção de uma célula",
     "Extend selection one row": "Ampliar a seleção uma linha",

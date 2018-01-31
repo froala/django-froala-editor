@@ -1,7 +1,7 @@
 /*!
- * froala_editor v2.7.1 (https://www.froala.com/wysiwyg-editor)
+ * froala_editor v2.7.4 (https://www.froala.com/wysiwyg-editor)
  * License https://froala.com/wysiwyg-editor/terms/
- * Copyright 2014-2017 Froala Labs
+ * Copyright 2014-2018 Froala Labs
  */
 
 (function (factory) {
@@ -132,6 +132,10 @@ $.FE.LANGUAGE['fi'] = {
     // Video
     "Insert Video": "Lis\u00e4\u00e4 video",
     "Embedded Code": "Upotettu koodi",
+    "Paste in a video URL": "Liitä video url",
+    "Drop video": "Pudota video",
+    "Your browser does not support HTML5 video.": "Selaimesi ei tue html5-videota.",
+    "Upload Video": "Lataa video",
 
     // Tables
     "Insert Table": "Lis\u00e4\u00e4 taulukko",
