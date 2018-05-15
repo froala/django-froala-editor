@@ -13,7 +13,7 @@ setup(
     long_description=open('README.md').read(),
     include_package_data=True,
     zip_safe=False,
-    keywords='froala,django,admin,wysiwyg,editor,text,html,editor,rich, web',
+    keywords='froala,django,admin,wysiwyg,editor,text,html,editor,rich,web',
     classifiers=[
         'Environment :: Web Environment',
         'Framework :: Django',

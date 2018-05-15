@@ -11,7 +11,7 @@ PLUGINS_WITH_CSS = (
 )
 
 THIRD_PARTY = (
-    'image_aviary', 'spell_checker'
+    # 'image_aviary', 'spell_checker'
 )
 
 THIRD_PARTY_WITH_CSS = (
