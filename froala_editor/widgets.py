@@ -14,7 +14,7 @@ class FroalaEditor(widgets.Textarea):
     def __init__(self, *args, **kwargs):
         self.options = kwargs.pop('options', {})
         self.plugins = kwargs.pop('plugins', getattr(settings, 'FROALA_EDITOR_PLUGINS', PLUGINS))
-        self.third_party = kwargs.pop('plugins', getattr(settings, 'FROALA_EDITOR_THIRD_PARTY', THIRD_PARTY))
+        self.third_party = kwargs.pop('third_party', getattr(settings, 'FROALA_EDITOR_THIRD_PARTY', THIRD_PARTY))
         self.theme = kwargs.pop('theme', getattr(settings, 'FROALA_EDITOR_THEME', None))
         self.include_jquery = kwargs.pop('include_jquery', getattr(settings, 'FROALA_INCLUDE_JQUERY', True))
         self.image_upload = kwargs.pop('image_upload', True)
