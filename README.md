@@ -133,6 +133,20 @@ class Page(models.Model):
   content = FroalaField(plugins=('font_size', 'font_family'))
 ```
 
+### Third party integrations
+
+`FROALA_EDITOR_THIRD_PARTY` setting can be used to configure third party integrations. Aviary Image Editor and SCAYT Web SpellChecker are available for now.
+To enable, in `settings.py`:
+
+```python
+FRAOLA_EDITOR_THIRD_PARTY = ('image_aviary', 'spell_checker')
+```
+
+Similar to plugin configuration, this can also be overridden on `ForalaEditor` and `FroalaField`.
+
+Use your key for SCAYT Web SpellChecker with `SCAYT_CUSTOMER_ID` in your project setings.
+
+
 ### Image upload
 
 `FroalaEditor` and `FroalaField` optionally take in a boolean value for `image_upload` argument to enable or disable image uploads. Image uploads are enabled by default if the urls of this package are included in your urls.py.
