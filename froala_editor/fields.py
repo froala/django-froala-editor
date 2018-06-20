@@ -4,7 +4,7 @@ from django.forms import Textarea
 from froala_editor.widgets import FroalaEditor
 from django.conf import settings
 
-from . import PLUGINS
+from . import PLUGINS, THIRD_PARTY
 
 
 class FroalaField(Field):
@@ -14,6 +14,7 @@ class FroalaField(Field):
         self.options = kwargs.pop('options', {})
         self.theme = kwargs.pop('theme', getattr(settings, 'FROALA_EDITOR_THEME', None))
         self.plugins = kwargs.pop('plugins', getattr(settings, 'FROALA_EDITOR_PLUGINS', PLUGINS))
+        self.third_party = kwargs.pop('plugins', getattr(settings, 'FROALA_EDITOR_THIRD_PARTY', THIRD_PARTY))
         self.include_jquery = kwargs.pop('include_jquery', getattr(settings, 'FROALA_INCLUDE_JQUERY', True))
         self.image_upload = kwargs.pop('image_upload', True)
         self.file_upload = kwargs.pop('file_upload', True)
@@ -27,7 +28,7 @@ class FroalaField(Field):
         if self.use_froala:
             widget = FroalaEditor(options=self.options, theme=self.theme, plugins=self.plugins,
                                   include_jquery=self.include_jquery, image_upload=self.image_upload,
-                                  file_upload=self.file_upload)
+                                  file_upload=self.file_upload, third_party=self.third_party)
         else:
             widget = Textarea()
         defaults = {'widget': widget}

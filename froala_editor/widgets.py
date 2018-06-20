@@ -2,7 +2,7 @@ from django.forms import widgets, Media
 from django.utils.safestring import mark_safe
 from django.conf import settings
 import json
-from . import PLUGINS, PLUGINS_WITH_CSS
+from . import PLUGINS, PLUGINS_WITH_CSS, THIRD_PARTY, THIRD_PARTY_WITH_CSS
 
 try:
     from django.urls import NoReverseMatch, reverse
@@ -14,6 +14,7 @@ class FroalaEditor(widgets.Textarea):
     def __init__(self, *args, **kwargs):
         self.options = kwargs.pop('options', {})
         self.plugins = kwargs.pop('plugins', getattr(settings, 'FROALA_EDITOR_PLUGINS', PLUGINS))
+        self.third_party = kwargs.pop('third_party', getattr(settings, 'FROALA_EDITOR_THIRD_PARTY', THIRD_PARTY))
         self.theme = kwargs.pop('theme', getattr(settings, 'FROALA_EDITOR_THEME', None))
         self.include_jquery = kwargs.pop('include_jquery', getattr(settings, 'FROALA_INCLUDE_JQUERY', True))
         self.image_upload = kwargs.pop('image_upload', True)
@@ -46,6 +47,9 @@ class FroalaEditor(widgets.Textarea):
         options = dict(default_options.items()).copy()
         options.update(settings_options.items())
         options.update(self.options.items())
+
+        if hasattr(settings, 'SCAYT_CUSTOMER_ID'):
+            options['scaytCustomerId'] = settings.SCAYT_CUSTOMER_ID
 
         if self.theme:
             options['theme'] = self.theme
@@ -91,6 +95,10 @@ class FroalaEditor(widgets.Textarea):
             js += ('froala_editor/js/plugins/' + plugin + '.min.js',)
             if plugin in PLUGINS_WITH_CSS:
                 css['all'] += ('froala_editor/css/plugins/' + plugin + '.min.css',)
+        for plugin in self.third_party:
+            js += ('froala_editor/js/third_party/' + plugin + '.min.js',)
+            if plugin in THIRD_PARTY_WITH_CSS:
+                css['all'] += ('froala_editor/css/third_party/' + plugin + '.min.css',)
 
         return Media(css=css, js=js)
 
