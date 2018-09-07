@@ -58,7 +58,7 @@ class FroalaEditor(widgets.Textarea):
         json_options = json_options.replace('"csrftokenplaceholder"', 'getCookie("csrftoken")')
         return json_options
 
-    def render(self, name, value, attrs=None):
+    def render(self, name, value, attrs=None, renderer=None):
         html = super(FroalaEditor, self).render(name, value, attrs)
         el_id = self.build_attrs(attrs).get('id')
         html += self.trigger_froala(el_id, self.get_options())
