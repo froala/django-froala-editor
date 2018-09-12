@@ -16,9 +16,9 @@ OR
 
 Add the directory `froala_editor` from this repo to your Python path.
 
-1. Add `froala_editor` to INSTALLED_APPS in `settings.py`.
+2. Add `froala_editor` to INSTALLED_APPS in `settings.py`.
 
-2. Add the following line to `urlpatterns` in your application's `urls.py`.
+3. Add the following line to `urlpatterns` in your application's `urls.py`.
 
 ```python
   url(r'^froala_editor/', include('froala_editor.urls')),
