@@ -9,7 +9,7 @@
   `pip install django-froala-editor`
 
   if not update in pypi use this
-  
+
   `pip install https://github.com/froala/django-froala-editor/archive/master.zip`
 
 OR
@@ -160,6 +160,13 @@ jQuery is included by default in form media. If you don't want to include jQuery
 ### Other Settings
 
 Using `USE_FROALA_EDITOR = False` in your Django settings disables Froala editor and uses a TextArea instead.
+
+### Release
+
+To publish to PyPi, the following command should be run:
+```bash
+python setup.py sdist upload -r pypi
+```
 
 ## License
 
