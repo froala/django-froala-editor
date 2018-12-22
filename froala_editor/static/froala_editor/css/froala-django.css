@@ -10,3 +10,11 @@ form .fr-element p {
 .fr-box {
     clear: both;
 }
+
+div.form-row {
+    overflow: visible;
+}
+
+.aligned label:not(.vCheckboxLabel):after {
+    content: none;
+}
