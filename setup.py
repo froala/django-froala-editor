@@ -2,9 +2,9 @@ from setuptools import setup
 
 setup(
     name='django-froala-editor',
-    version='2.9.1',
+    version='2.9.1-2',
     author='Dipesh Acharya',
-    author_email='xtranophilist@gmail.com',
+    author_email='dipesh@awecode.com',
     maintainer='Froala Labs',
     packages=['froala_editor'],
     url='http://github.com/froala/django-froala-editor/',
