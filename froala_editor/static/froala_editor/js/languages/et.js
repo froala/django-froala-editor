@@ -1,5 +1,5 @@
 /*!
- * froala_editor v2.7.5 (https://www.froala.com/wysiwyg-editor)
+ * froala_editor v2.9.1 (https://www.froala.com/wysiwyg-editor)
  * License https://froala.com/wysiwyg-editor/terms/
  * Copyright 2014-2018 Froala Labs
  */
@@ -121,7 +121,7 @@ $.FE.LANGUAGE['et'] = {
     "Display": "Kuvama",
     "Inline": "J\u00e4rjekorras",
     "Break Text": "Murdma teksti",
-    "Alternate Text": "Asendusliikme teksti",
+    "Alternative Text": "Asendusliikme teksti",
     "Change Size": "Muuda suurust",
     "Width": "Laius",
     "Height": "K\u00f5rgus",
@@ -243,6 +243,9 @@ $.FE.LANGUAGE['et'] = {
 
     // Clear formatting
     "Clear Formatting": "Eemalda formaatimine",
+
+    // Save
+    "Save": "Salvesta",
 
     // Undo, redo
     "Undo": "V\u00f5ta tagasi",

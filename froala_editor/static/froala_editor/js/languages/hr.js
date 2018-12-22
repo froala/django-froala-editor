@@ -1,5 +1,5 @@
 /*!
- * froala_editor v2.7.5 (https://www.froala.com/wysiwyg-editor)
+ * froala_editor v2.9.1 (https://www.froala.com/wysiwyg-editor)
  * License https://froala.com/wysiwyg-editor/terms/
  * Copyright 2014-2018 Froala Labs
  */
@@ -121,7 +121,7 @@ $.FE.LANGUAGE['hr'] = {
     "Display": "Prika\u017ei",
     "Inline": "U liniji",
     "Break Text": "Odvojeni tekst",
-    "Alternate Text": "Alternativni tekst",
+    "Alternative Text": "Alternativni tekst",
     "Change Size": "Promjena veli\u010dine",
     "Width": "\u0160irina",
     "Height": "Visina",
@@ -243,6 +243,9 @@ $.FE.LANGUAGE['hr'] = {
 
     // Clear formatting
     "Clear Formatting": "Ukloni oblikovanje",
+
+    // Save
+    "Save": "\u0055\u0161\u0074\u0065\u0064\u006a\u0065\u0074\u0069",
 
     // Undo, redo
     "Undo": "Korak natrag",

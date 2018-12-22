@@ -1,5 +1,5 @@
 /*!
- * froala_editor v2.7.5 (https://www.froala.com/wysiwyg-editor)
+ * froala_editor v2.9.1 (https://www.froala.com/wysiwyg-editor)
  * License https://froala.com/wysiwyg-editor/terms/
  * Copyright 2014-2018 Froala Labs
  */
@@ -121,7 +121,7 @@ $.FE.LANGUAGE['it'] = {
     "Display": "Visualizzazione",
     "Inline": "In Linea",
     "Break Text": "Separa dal Testo",
-    "Alternate Text": "Testo Alternativo",
+    "Alternative Text": "Testo Alternativo",
     "Change Size": "Cambia Dimensioni",
     "Width": "Larghezza",
     "Height": "Altezza",
@@ -243,6 +243,9 @@ $.FE.LANGUAGE['it'] = {
 
     // Clear formatting
     "Clear Formatting": "Cancella Formattazione",
+
+    // Save
+    "Save": "Salvare",
 
     // Undo, redo
     "Undo": "Annulla",

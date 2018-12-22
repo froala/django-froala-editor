@@ -1,5 +1,5 @@
 /*!
- * froala_editor v2.7.5 (https://www.froala.com/wysiwyg-editor)
+ * froala_editor v2.9.1 (https://www.froala.com/wysiwyg-editor)
  * License https://froala.com/wysiwyg-editor/terms/
  * Copyright 2014-2018 Froala Labs
  */
@@ -112,7 +112,6 @@ $.FE.LANGUAGE['ro'] = {
     "or click": "sau f\u0103 click",
     "Manage Images": "Gestionare imagini",
     "Loading": "Se \u00eencarc\u0103",
-    "Deleting": "",
     "Deleting": "Se \u0219terge",
     "Tags": "Etichete",
     "Are you sure? Image will be deleted.": "Sunte\u021bi sigur? Imaginea va fi \u015ftears\u0103.",
@@ -122,7 +121,7 @@ $.FE.LANGUAGE['ro'] = {
     "Display": "Afi\u0219are",
     "Inline": "\u00cen linie",
     "Break Text": "Sparge text",
-    "Alternate Text": "Text alternativ",
+    "Alternative Text": "Text alternativ",
     "Change Size": "Modificare dimensiuni",
     "Width": "L\u0103\u021bime",
     "Height": "\u00cen\u0103l\u021bime",
@@ -244,6 +243,9 @@ $.FE.LANGUAGE['ro'] = {
 
     // Clear formatting
     "Clear Formatting": "Elimina\u021bi formatarea",
+
+    // Save
+    "Save": "\u0053\u0061\u006c\u0076\u0061\u021b\u0069",
 
     // Undo, redo
     "Undo": "Reexecut\u0103",

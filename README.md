@@ -9,16 +9,16 @@
   `pip install django-froala-editor`
 
   if not update in pypi use this
-  
+
   `pip install https://github.com/froala/django-froala-editor/archive/master.zip`
 
 OR
 
 Add the directory `froala_editor` from this repo to your Python path.
 
-1. Add `froala_editor` to INSTALLED_APPS in `settings.py`.
+2. Add `froala_editor` to INSTALLED_APPS in `settings.py`.
 
-2. Add the following line to `urlpatterns` in your application's `urls.py`.
+3. Add the following line to `urlpatterns` in your application's `urls.py`.
 
 ```python
   url(r'^froala_editor/', include('froala_editor.urls')),
@@ -133,6 +133,20 @@ class Page(models.Model):
   content = FroalaField(plugins=('font_size', 'font_family'))
 ```
 
+### Third party integrations
+
+`FROALA_EDITOR_THIRD_PARTY` setting can be used to configure third party integrations. Aviary Image Editor and SCAYT Web SpellChecker are available for now.
+To enable, in `settings.py`:
+
+```python
+FRAOLA_EDITOR_THIRD_PARTY = ('image_aviary', 'spell_checker')
+```
+
+Similar to plugin configuration, this can also be overridden on `ForalaEditor` and `FroalaField`.
+
+Use your key for SCAYT Web SpellChecker with `SCAYT_CUSTOMER_ID` in your project setings.
+
+
 ### Image upload
 
 `FroalaEditor` and `FroalaField` optionally take in a boolean value for `image_upload` argument to enable or disable image uploads. Image uploads are enabled by default if the urls of this package are included in your urls.py.
@@ -142,6 +156,17 @@ You can use `FROALA_UPLOAD_PATH` setting in `settings.py` to change the path whe
 ### Include jQuery
 
 jQuery is included by default in form media. If you don't want to include jQuery, you may pass `include_jquery=False` to `FroalaEditor` or `FroalaField`. `FROALA_INCLUDE_JQUERY` can be also set in `settings.py` for project wide effects.
+
+### Other Settings
+
+Using `USE_FROALA_EDITOR = False` in your Django settings disables Froala editor and uses a TextArea instead.
+
+### Release
+
+To publish to PyPi, the following command should be run:
+```bash
+python setup.py sdist upload -r pypi
+```
 
 ## License
 

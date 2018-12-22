@@ -1,5 +1,5 @@
 /*!
- * froala_editor v2.7.5 (https://www.froala.com/wysiwyg-editor)
+ * froala_editor v2.9.1 (https://www.froala.com/wysiwyg-editor)
  * License https://froala.com/wysiwyg-editor/terms/
  * Copyright 2014-2018 Froala Labs
  */
@@ -121,7 +121,7 @@ $.FE.LANGUAGE['ja'] = {
     "Display": "\u8868\u793a",
     "Inline": "\u30a4\u30f3\u30e9\u30a4\u30f3",
     "Break Text": "\u30c6\u30ad\u30b9\u30c8\u306e\u6539\u884c",
-    "Alternate Text": "\u4ee3\u66ff\u30c6\u30ad\u30b9\u30c8",
+    "Alternative Text": "\u4ee3\u66ff\u30c6\u30ad\u30b9\u30c8",
     "Change Size": "\u30b5\u30a4\u30ba\u5909\u66f4",
     "Width": "\u5e45",
     "Height": "\u9ad8\u3055",
@@ -243,6 +243,9 @@ $.FE.LANGUAGE['ja'] = {
 
     // Clear formatting
     "Clear Formatting": "\u66f8\u5f0f\u306e\u30af\u30ea\u30a2",
+
+    // Save
+    "Save": "\u30bb\u30fc\u30d6",
 
     // Undo, redo
     "Undo": "\u5143\u306b\u623b\u3059",

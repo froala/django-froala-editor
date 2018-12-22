@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='django-froala-editor',
-    version='2.7.5',
+    version='2.9.1',
     author='Dipesh Acharya',
     author_email='xtranophilist@gmail.com',
     maintainer='Froala Labs',
@@ -13,7 +13,7 @@ setup(
     long_description=open('README.md').read(),
     include_package_data=True,
     zip_safe=False,
-    keywords='froala,django,admin,wysiwyg,editor,text,html,editor,rich, web',
+    keywords='froala,django,admin,wysiwyg,editor,text,html,editor,rich,web',
     classifiers=[
         'Environment :: Web Environment',
         'Framework :: Django',
@@ -22,6 +22,7 @@ setup(
         'Operating System :: OS Independent',
         'Programming Language :: Python',
         'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3',
         'Topic :: Internet :: WWW/HTTP',
         'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
     ],

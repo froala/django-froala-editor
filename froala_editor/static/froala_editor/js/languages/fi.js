@@ -1,5 +1,5 @@
 /*!
- * froala_editor v2.7.5 (https://www.froala.com/wysiwyg-editor)
+ * froala_editor v2.9.1 (https://www.froala.com/wysiwyg-editor)
  * License https://froala.com/wysiwyg-editor/terms/
  * Copyright 2014-2018 Froala Labs
  */
@@ -121,7 +121,7 @@ $.FE.LANGUAGE['fi'] = {
     "Display": "N\u00e4ytt\u00e4",
     "Inline": "Linjassa",
     "Break Text": "Rikkoa teksti",
-    "Alternate Text": "Vaihtoehtoinen teksti",
+    "Alternative Text": "Vaihtoehtoinen teksti",
     "Change Size": "Muuta kokoa",
     "Width": "Leveys",
     "Height": "Korkeus",
@@ -243,6 +243,9 @@ $.FE.LANGUAGE['fi'] = {
 
     // Clear formatting
     "Clear Formatting": "Poista muotoilu",
+
+    // Save
+    "Save": "Tallentaa",
 
     // Undo, redo
     "Undo": "Peru",
