@@ -9,6 +9,7 @@ form .fr-element p {
 
 .fr-box {
     clear: both;
+    z-index: 1;
 }
 
 div.form-row {
