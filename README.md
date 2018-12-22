@@ -159,7 +159,14 @@ jQuery is included by default in form media. If you don't want to include jQuery
 
 ### Other Settings
 
-Using `USE_FROALA_EDITOR = False` in your Django settings disables Froala editor and uses a TextArea instead.
+`USE_FROALA_EDITOR` - default True  
+ If set to Falsein your Django settings disables Froala editor and uses a TextArea instead.
+
+`FROALA_STORAGE_BACKEND`  
+This allows for the storage used for uploaded images and files to be changed through settings. If nothing is provided it uses default_storage, otherwise it uses this backend. Using this you can specify a different storage backend like S3 only for Froala.
+
+`FROALA_JS_COOKIE` - default False.  
+If set to True, it assumes [js-cookie](https://github.com/js-cookie/js-cookie) is installed and included to get the CSRF token using js-cookie.
 
 ### Release
 
