@@ -14,7 +14,7 @@ function getCookie(name) {
   return cookieValue;
 }
 
-if (typeof django !== 'undefined') {
+if (typeof django !== 'undefined' && typeof django.jQuery !== 'undefined') {
   (function ($) {
     $(document).on('formset:added', function (event, $row, formsetName) {
       $row.find('textarea').each(function () {
