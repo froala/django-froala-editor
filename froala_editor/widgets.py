@@ -16,7 +16,6 @@ class FroalaEditor(widgets.Textarea):
         self.plugins = kwargs.pop('plugins', getattr(settings, 'FROALA_EDITOR_PLUGINS', PLUGINS))
         self.third_party = kwargs.pop('third_party', getattr(settings, 'FROALA_EDITOR_THIRD_PARTY', THIRD_PARTY))
         self.theme = kwargs.pop('theme', getattr(settings, 'FROALA_EDITOR_THEME', None))
-        self.include_jquery = kwargs.pop('include_jquery', getattr(settings, 'FROALA_INCLUDE_JQUERY', True))
         self.image_upload = kwargs.pop('image_upload', True)
         self.file_upload = kwargs.pop('file_upload', True)
         self.language = (getattr(settings, 'FROALA_EDITOR_OPTIONS', {})).get('language', '')
@@ -71,22 +70,16 @@ class FroalaEditor(widgets.Textarea):
 
         str = """
         <script>
-            $(function(){
-                $('#%s').froalaEditor(%s)
-            });
+            new FroalaEditor('#%s',%s)
         </script>""" % (el_id, options)
         return str
 
     def _media(self):
         css = {
-            'all': ('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css',
-                    'froala_editor/css/froala_editor.min.css', 'froala_editor/css/froala_style.min.css',
+            'all': ('froala_editor/css/froala_editor.min.css', 'froala_editor/css/froala_style.min.css',
                     'froala_editor/css/froala-django.css')
         }
         js = ('froala_editor/js/froala_editor.min.js', 'froala_editor/js/froala-django.js',)
-
-        if self.include_jquery:
-            js = ('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js',) + js
 
         if self.theme:
             css['all'] += ('froala_editor/css/themes/' + self.theme + '.min.css',)
