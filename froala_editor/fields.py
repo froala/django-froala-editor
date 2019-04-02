@@ -15,10 +15,9 @@ class FroalaField(Field):
         self.theme = kwargs.pop('theme', getattr(settings, 'FROALA_EDITOR_THEME', None))
         self.plugins = kwargs.pop('plugins', getattr(settings, 'FROALA_EDITOR_PLUGINS', PLUGINS))
         self.third_party = kwargs.pop('plugins', getattr(settings, 'FROALA_EDITOR_THIRD_PARTY', THIRD_PARTY))
-        self.include_jquery = kwargs.pop('include_jquery', getattr(settings, 'FROALA_INCLUDE_JQUERY', True))
         self.image_upload = kwargs.pop('image_upload', True)
         self.file_upload = kwargs.pop('file_upload', True)
-        self.use_froala = kwargs.pop('include_jquery', getattr(settings, 'USE_FROALA_EDITOR', True))
+        self.use_froala = kwargs.pop('', getattr(settings, 'USE_FROALA_EDITOR', True))
         super(FroalaField, self).__init__(*args, **kwargs)
 
     def get_internal_type(self):
@@ -27,7 +26,7 @@ class FroalaField(Field):
     def formfield(self, **kwargs):
         if self.use_froala:
             widget = FroalaEditor(options=self.options, theme=self.theme, plugins=self.plugins,
-                                  include_jquery=self.include_jquery, image_upload=self.image_upload,
+                                  image_upload=self.image_upload,
                                   file_upload=self.file_upload, third_party=self.third_party)
         else:
             widget = Textarea()

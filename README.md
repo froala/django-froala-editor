@@ -54,21 +54,6 @@ When used outside the Django admin, the media files are to be manually included 
 {{ form.media }}
 ```
 
-In case of jQuery conflict (when your project template already has jQuery), you need to include the following files instead of `{{ form.media }}` plus the static files for theme (if not default) and required plugins.
-
-```python
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" type="text/css" media="all" rel="stylesheet" />
-<link href="{{STATIC_URL}}froala_editor/css/froala_editor.min.css" type="text/css" media="all" rel="stylesheet" />
-<link href="{{STATIC_URL}}froala_editor/css/froala_style.min.css" type="text/css" media="all" rel="stylesheet" />
-<script type="text/javascript" src="{{STATIC_URL}}froala_editor/js/froala_editor.min.js"></script>
-```
-
-Or simply, you may use the following in your `settings.py` if you don't want Froala to include jQuery by itself, thus preventing any conflicts:
-
-```python
-FROALA_INCLUDE_JQUERY = False
-```
-
 ### Options
 
 Froala Editor provides several options for customizing the editor. See [https://froala.com/wysiwyg-editor/docs](https://froala.com/wysiwyg-editor/docs) for all available options.
@@ -152,10 +137,6 @@ Use your key for SCAYT Web SpellChecker with `SCAYT_CUSTOMER_ID` in your project
 `FroalaEditor` and `FroalaField` optionally take in a boolean value for `image_upload` argument to enable or disable image uploads. Image uploads are enabled by default if the urls of this package are included in your urls.py.
 
 You can use `FROALA_UPLOAD_PATH` setting in `settings.py` to change the path where uploaded files are stored within the `MEDIA_ROOT`. By default, `uploads/froala_editor/images` is used for storing uploaded images.
-
-### Include jQuery
-
-jQuery is included by default in form media. If you don't want to include jQuery, you may pass `include_jquery=False` to `FroalaEditor` or `FroalaField`. `FROALA_INCLUDE_JQUERY` can be also set in `settings.py` for project wide effects.
 
 ### Other Settings
 
