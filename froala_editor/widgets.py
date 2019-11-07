@@ -99,3 +99,7 @@ class FroalaEditor(widgets.Textarea):
         return Media(css=css, js=js)
 
     media = property(_media)
+
+    def use_required_attribute(self, initial):
+        # textarea is hidden so HTML5 validation won't work properly
+        return False
