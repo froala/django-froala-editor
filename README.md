@@ -21,10 +21,23 @@ Add the directory `froala_editor` from this repo to your Python path.
 3. Add the following line to `urlpatterns` in your application's `urls.py`.
 
 ```python
-  url(r'^froala_editor/', include('froala_editor.urls')),
+from froala_editor import views
+```
+In your `urlpatterns` array add 
+```
+path('froala_editor/',include('froala_editor.urls'))
 ```
 
 Skip this url inclusion if you don't want image and file upload inside WYSIWYG editor. Images from URLs can still be embedded.
+
+##### To add third-party plugins 
+In `froala_editor\widgets.py` add 
+```
+'froala_editor/js/third_party/embedly.min.js',
+'froala_editor/js/third_party/spell_checker.min.js',
+'froala_editor/js/third_party/font_awesome.min.js',
+'froala_editor/js/third_party/image_tui.min.js'
+```
 
 ## Usage
 
