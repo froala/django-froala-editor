@@ -67,6 +67,10 @@ When used outside the Django admin, the media files are to be manually included 
 {{ form.media }}
 ```
 
+### Usage with virtual environment
+
+To use Froala Editor in virtual environment, see [https://tutorial.djangogirls.org/en/django_installation/](https://tutorial.djangogirls.org/en/django_installation/) for how to setup virtual environment & to start your application in virtual environment.
+
 ### Options
 
 Froala Editor provides several options for customizing the editor. See [https://froala.com/wysiwyg-editor/docs](https://froala.com/wysiwyg-editor/docs) for all available options.
