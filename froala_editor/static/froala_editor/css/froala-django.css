@@ -11,6 +11,7 @@ form .fr-element p {
     clear: both;
     z-index: 1;
     padding-top: 10px;
+    display: inline-block;
 }
 
 div.form-row {
