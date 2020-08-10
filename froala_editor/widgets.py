@@ -18,6 +18,7 @@ class FroalaEditor(widgets.Textarea):
         self.theme = kwargs.pop('theme', getattr(settings, 'FROALA_EDITOR_THEME', None))
         self.image_upload = kwargs.pop('image_upload', True)
         self.file_upload = kwargs.pop('file_upload', True)
+        self.widget_name = kwargs.pop('widget_name', getattr(settings, 'FROALA_EDITOR_WIDGET_NAME', 'froalaEditor'))
         self.language = (getattr(settings, 'FROALA_EDITOR_OPTIONS', {})).get('language', '')
         super(FroalaEditor, self).__init__(*args, **kwargs)
 
@@ -70,8 +71,8 @@ class FroalaEditor(widgets.Textarea):
 
         str = """
         <script>
-            new FroalaEditor('#%s',%s)
-        </script>""" % (el_id, options)
+            const %s = new FroalaEditor('#%s',%s)
+        </script>""" % (self.widget_name, el_id, options)
         return str
 
     def _media(self):
