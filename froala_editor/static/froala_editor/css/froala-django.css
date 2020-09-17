@@ -10,6 +10,8 @@ form .fr-element p {
 .fr-box {
     clear: both;
     z-index: 1;
+    padding-top: 10px;
+    display: inline-block;
 }
 
 div.form-row {
@@ -18,4 +20,10 @@ div.form-row {
 
 .aligned label:not(.vCheckboxLabel):after {
     content: none;
+}
+
+
+.related-widget-wrapper {
+    float: unset;
+    display: inline-block;
 }
