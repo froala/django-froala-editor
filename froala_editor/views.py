@@ -48,3 +48,26 @@ def file_upload(request):
         path = storage.save(os.path.join(upload_to, the_file.name), the_file)
         link = storage.url(path)
         return HttpResponse(json.dumps({'link': link}), content_type="application/json")
+
+
+def video_upload(request):
+    if 'file' in request.FILES:
+        the_file = request.FILES['file']
+        allowed_types = [
+            'video/mp4',
+            'video/webm',
+            'video/ogg',
+        ]
+        if not the_file.content_type in allowed_types:
+            return HttpResponse(json.dumps({'error': _('You can only upload videos.')}),
+                                content_type="application/json")
+
+        # Other data on the request.FILES dictionary:
+        # filesize = len(file['content'])
+        # filetype = file['content-type']
+
+        upload_to = getattr(settings, 'FROALA_UPLOAD_PATH', 'uploads/froala_editor/videos/')
+        path = storage.save(os.path.join(upload_to, the_file.name), the_file)
+        link = request.build_absolute_uri(storage.url(path))
+
+        return HttpResponse(json.dumps({'link': link}), content_type="application/json")
