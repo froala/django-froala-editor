@@ -18,8 +18,9 @@ if (typeof django !== 'undefined' && typeof django.jQuery !== 'undefined') {
   (function ($) {
     $(document).on('formset:added', function (event, $row, formsetName) {
       $row.find('textarea').each(function () {
-        $(this).prev().remove();
-        jQuery(this).froalaEditor();
+        var froala_script = this.nextElementSibling.innerText.replace('__prefix__', this.closest('tr').id.split('-')[-1]);
+        this.parentElement.innerHTML = this.outerHTML;
+        django.jQuery(this.closest('td')).append("<script>" + froala_script + "</script>");
       });
     });
   })(django.jQuery);
