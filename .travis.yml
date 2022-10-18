@@ -4,8 +4,7 @@ git:
 language: generic
 dist: bionic 
 sudo: required
- 
-branches:
+
   only:
     - /dev*/
     - /AO-dev*/
@@ -28,7 +27,7 @@ jobs:
 
     script: 
 
-  - chmod u+x publish_package.sh && bash publish_package.sh  
+      - chmod u+x publish_package.sh && bash publish_package.sh
 
 notifications:
   email:
