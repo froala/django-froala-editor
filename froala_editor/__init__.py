@@ -7,7 +7,7 @@ PLUGINS = (
 
 PLUGINS_WITH_CSS = (
     'char_counter', 'code_view', 'colors', 'draggable', 'emoticons', 'file', 'fullscreen', 'help', 'image', 'image_manager',
-    'line_breaker', 'quick_insert', 'special_characters', 'table', 'video',
+    'line_breaker', 'quick_insert', 'special_characters', 'table', 'video', 'markdown', 'filestack'
 )
 
 THIRD_PARTY = (
