@@ -24,7 +24,8 @@ def image_upload(request):
             'image/pjpeg',
             'image/x-png',
             'image/png',
-            'image/gif'
+            'image/gif',
+            'image/webp'
         ]
         if not the_file.content_type in allowed_types:
             return HttpResponse(json.dumps({'error': _('You can only upload images.')}),
