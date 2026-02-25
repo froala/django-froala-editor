@@ -18,6 +18,7 @@ class FroalaEditor(widgets.Textarea):
         self.theme = kwargs.pop('theme', getattr(settings, 'FROALA_EDITOR_THEME', None))
         self.image_upload = kwargs.pop('image_upload', True)
         self.file_upload = kwargs.pop('file_upload', True)
+        self.video_upload = kwargs.pop('video_upload', True)
         self.language = (getattr(settings, 'FROALA_EDITOR_OPTIONS', {})).get('language', '')
         super(FroalaEditor, self).__init__(*args, **kwargs)
 
@@ -40,6 +41,13 @@ class FroalaEditor(widgets.Textarea):
             default_options.update([('fileUploadParams', {'csrfmiddlewaretoken': 'csrftokenplaceholder'})])
         except NoReverseMatch:
             default_options['fileUpload'] = False
+
+        try:
+            video_upload_url = reverse('froala_editor_video_upload')
+            default_options['videoUploadURL'] = video_upload_url
+            default_options.update([('videoUploadParams', {'csrfmiddlewaretoken': 'csrftokenplaceholder'})])
+        except NoReverseMatch:
+            default_options['videoUpload'] = False
 
         settings_options = getattr(settings, 'FROALA_EDITOR_OPTIONS', {})
         # options = dict(default_options.items() + settings_options.items() + self.options.items())
