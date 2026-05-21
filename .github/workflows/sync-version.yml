@@ -24,13 +24,19 @@ jobs:
         run: |
           VERSION="${{ github.event.client_payload.version }}"
           VERSION="${VERSION//,/\.}"
-
-          if ! [[ "$VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+(-[0-9A-Za-z.-]+)?$ ]]; then
-            echo "Invalid version: $VERSION"
+ 
+          if [ -z "$VERSION" ]; then
+            echo "Version missing in dispatch payload"
             exit 1
           fi
-
+ 
+          if ! [[ "$VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+(-[0-9A-Za-z.-]+)?$ ]]; then
+            echo "Invalid version format: $VERSION"
+            exit 1
+          fi
+ 
           echo "VERSION=$VERSION" >> $GITHUB_ENV
+          echo "Dispatching version $VERSION"
 
 
       - name: Prepare release branch
@@ -58,11 +64,10 @@ jobs:
           GIT_TOKEN: ${{ secrets.PAT }}
         run: |
           git clone --depth 1 \
-            "https://x-access-token:${GIT_TOKEN}@github.com/froala/wysiwyg-editor.git" \
-            /tmp/wysiwyg-main
+            "https://x-access-token:${GIT_TOKEN}@github.com/froala/wysiwyg-editor.git" /tmp/wysiwyg-main
 
-          mkdir -p app/froala_editor/static/froala_editor/js
-          mkdir -p app/froala_editor/static/froala_editor/css
+          mkdir -p froala_editor/static/froala_editor/js
+          mkdir -p froala_editor/static/froala_editor/css
           
           
           rsync -av --delete /tmp/wysiwyg-main/js/ froala_editor/static/froala_editor/js/
@@ -74,7 +79,7 @@ jobs:
           git config user.name "froala-travis-bot"
           git config user.email "froala_git_travis_bot@idera.com"
 
-          git add app/froala_editor/static/froala_editor/js app/froala_editor/static/froala_editor/css setup.py
+          git add froala_editor/static/froala_editor/js froala_editor/static/froala_editor/css setup.py
 
           git commit -m "chore: release v${VERSION}" || echo "Nothing to commit"
           git push origin "$BRANCH"
@@ -85,7 +90,12 @@ jobs:
           GH_TOKEN: ${{ secrets.PAT }}
           RELEASE_NOTES: ${{ github.event.client_payload.release_notes }}
         run: |
-          PR_BODY=$(printf "release: yes\n\n## Release Notes (from primary repo)\n\n%s\n" "$RELEASE_NOTES")
+          git fetch origin master
+ 
+          if git diff --quiet origin/master..."$BRANCH"; then
+            echo "No commits between $BRANCH and master. Skipping PR creation."
+            exit 0
+          fi
 
           gh pr create \
             --base master \
