@@ -97,6 +97,8 @@ jobs:
             exit 0
           fi
 
+          PR_BODY=$(printf "%s\n" "$RELEASE_NOTES")
+
           gh pr create \
             --base master \
             --head "$BRANCH" \
