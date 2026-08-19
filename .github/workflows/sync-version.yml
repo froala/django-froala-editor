@@ -60,22 +60,15 @@ jobs:
           git clone --depth 1 \
             "https://x-access-token:${GIT_TOKEN}@github.com/froala/wysiwyg-editor.git" \
             /tmp/wysiwyg-main
-
-          mkdir -p app/froala_editor/static/froala_editor/js
-          mkdir -p app/froala_editor/static/froala_editor/css
-          
           
           rsync -av --delete /tmp/wysiwyg-main/js/ froala_editor/static/froala_editor/js/
           rsync -av --delete /tmp/wysiwyg-main/css/ froala_editor/static/froala_editor/css/
-
-
+      
       - name: Commit & push
         run: |
           git config user.name "froala-travis-bot"
           git config user.email "froala_git_travis_bot@idera.com"
-
-          git add app/froala_editor/static/froala_editor/js app/froala_editor/static/froala_editor/css setup.py
-
+          git add froala_editor/static/froala_editor/js froala_editor/static/froala_editor/css setup.py
           git commit -m "chore: release v${VERSION}" || echo "Nothing to commit"
           git push origin "$BRANCH"
 
